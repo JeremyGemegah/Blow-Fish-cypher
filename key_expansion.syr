@@ -1,0 +1,464 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Reading design: key_expansion.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "key_expansion.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "key_expansion"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : key_expansion
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/key_evaluator.vhd" in Library work.
+Architecture behavioral of Entity key_evaluator is up to date.
+Compiling vhdl file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/key_mux.vhd" in Library work.
+Architecture behavioral of Entity key_mux is up to date.
+Compiling vhdl file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/register_448.vhd" in Library work.
+Architecture behavioral of Entity register_448 is up to date.
+Compiling vhdl file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/combinational_shifter.vhd" in Library work.
+Architecture behavioral of Entity combinational_shifter is up to date.
+Compiling vhdl file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/key_expansion.vhd" in Library work.
+Entity <key_expansion> compiled.
+Entity <key_expansion> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <key_expansion> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <key_evaluator> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <key_mux> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <register_448> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <combinational_shifter> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <key_expansion> in library <work> (Architecture <Behavioral>).
+Entity <key_expansion> analyzed. Unit <key_expansion> generated.
+
+Analyzing Entity <key_evaluator> in library <work> (Architecture <behavioral>).
+Entity <key_evaluator> analyzed. Unit <key_evaluator> generated.
+
+Analyzing Entity <key_mux> in library <work> (Architecture <behavioral>).
+Entity <key_mux> analyzed. Unit <key_mux> generated.
+
+Analyzing Entity <register_448> in library <work> (Architecture <behavioral>).
+Entity <register_448> analyzed. Unit <register_448> generated.
+
+Analyzing Entity <combinational_shifter> in library <work> (Architecture <behavioral>).
+Entity <combinational_shifter> analyzed. Unit <combinational_shifter> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <key_evaluator>.
+    Related source file is "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/key_evaluator.vhd".
+WARNING:Xst:647 - Input <input<31:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <key_evaluator> synthesized.
+
+
+Synthesizing Unit <key_mux>.
+    Related source file is "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/key_mux.vhd".
+Unit <key_mux> synthesized.
+
+
+Synthesizing Unit <register_448>.
+    Related source file is "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/register_448.vhd".
+    Found 448-bit register for signal <reg_val>.
+INFO:Xst:738 - HDL ADVISOR - 448 flip-flops were inferred for signal <reg_val>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred 448 D-type flip-flop(s).
+Unit <register_448> synthesized.
+
+
+Synthesizing Unit <combinational_shifter>.
+    Related source file is "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/combinational_shifter.vhd".
+    Found 448-bit 16-to-1 multiplexer for signal <result>.
+    Summary:
+	inferred 448 Multiplexer(s).
+Unit <combinational_shifter> synthesized.
+
+
+Synthesizing Unit <key_expansion>.
+    Related source file is "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/key_expansion.vhd".
+    Found 32-bit xor2 for signal <round_key>.
+Unit <key_expansion> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1
+ 448-bit register                                      : 1
+# Multiplexers                                         : 1
+ 448-bit 16-to-1 multiplexer                           : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 448
+ Flip-Flops                                            : 448
+# Multiplexers                                         : 1
+ 448-bit 16-to-1 multiplexer                           : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <key_expansion> ...
+
+Optimizing unit <register_448> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block key_expansion, actual ratio is 61.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 448
+ Flip-Flops                                            : 448
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : key_expansion.ngr
+Top Level Output File Name         : key_expansion
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 516
+
+Cell Usage :
+# BELS                             : 2123
+#      GND                         : 1
+#      LUT2                        : 35
+#      LUT3                        : 709
+#      LUT3_D                      : 96
+#      LUT4                        : 633
+#      LUT4_L                      : 96
+#      MUXCY                       : 104
+#      MUXF5                       : 416
+#      MUXF6                       : 32
+#      VCC                         : 1
+# FlipFlops/Latches                : 448
+#      FDCE                        : 448
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 515
+#      IBUF                        : 483
+#      OBUF                        : 32
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                      840  out of   1920    43%  
+ Number of Slice Flip Flops:            448  out of   3840    11%  
+ Number of 4 input LUTs:               1569  out of   3840    40%  
+ Number of IOs:                         516
+ Number of bonded IOBs:                 516  out of    173   298% (*) 
+ Number of GCLKs:                         1  out of      8    12%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 448   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+clr                                | IBUF                   | 448   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.259ns (Maximum Frequency: 159.770MHz)
+   Minimum input arrival time before clock: 19.094ns
+   Maximum output required time after clock: 8.832ns
+   Maximum combinational path delay: 8.957ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.259ns (frequency: 159.770MHz)
+  Total number of paths / destination ports: 1920 / 448
+-------------------------------------------------------------------------
+Delay:               6.259ns (Levels of Logic = 5)
+  Source:            key_register/reg_val_127 (FF)
+  Destination:       key_register/reg_val_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: key_register/reg_val_127 to key_register/reg_val_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.720   1.116  key_register/reg_val_127 (key_register/reg_val_127)
+     LUT3_D:I1->O          1   0.551   0.996  key_size<0>1471 (key_size<0>_mmx_out59)
+     LUT3:I1->O            1   0.551   0.000  key_combinational_shifter/Mmux_result_549 (key_combinational_shifter/Mmux_result_549)
+     MUXF5:I1->O           1   0.360   0.000  key_combinational_shifter/Mmux_result_4_f5_23 (key_combinational_shifter/Mmux_result_4_f524)
+     MUXF6:I0->O           1   0.342   0.869  key_combinational_shifter/Mmux_result_2_f6_23 (next_key<31>)
+     LUT3:I2->O            1   0.551   0.000  key_multiplexer/output<31>1 (mux_output<31>)
+     FDCE:D                    0.203          key_register/reg_val_31
+    ----------------------------------------
+    Total                      6.259ns (3.278ns logic, 2.981ns route)
+                                       (52.4% logic, 47.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 979584 / 896
+-------------------------------------------------------------------------
+Offset:              19.094ns (Levels of Logic = 18)
+  Source:            input_key<72> (PAD)
+  Destination:       key_register/reg_val_191 (FF)
+  Destination Clock: clk rising
+
+  Data Path: input_key<72> to key_register/reg_val_191
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.821   1.216  input_key_72_IBUF (input_key_72_IBUF)
+     LUT4:I0->O            1   0.551   0.000  evaluate_key/res10_cmp_eq0000_wg_lut<0> (evaluate_key/res10_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  evaluate_key/res10_cmp_eq0000_wg_cy<0> (evaluate_key/res10_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  evaluate_key/res10_cmp_eq0000_wg_cy<1> (evaluate_key/res10_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  evaluate_key/res10_cmp_eq0000_wg_cy<2> (evaluate_key/res10_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  evaluate_key/res10_cmp_eq0000_wg_cy<3> (evaluate_key/res10_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  evaluate_key/res10_cmp_eq0000_wg_cy<4> (evaluate_key/res10_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  evaluate_key/res10_cmp_eq0000_wg_cy<5> (evaluate_key/res10_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  evaluate_key/res10_cmp_eq0000_wg_cy<6> (evaluate_key/res10_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O           2   0.303   1.216  evaluate_key/res10_cmp_eq0000_wg_cy<7> (evaluate_key/res10_cmp_eq0000)
+     LUT4:I0->O            1   0.551   0.869  evaluate_key/size<1>16 (evaluate_key/size<1>16)
+     LUT4:I2->O            1   0.551   0.996  evaluate_key/size<1>36_SW0 (N749)
+     LUT4:I1->O            1   0.551   1.140  evaluate_key/size<1>36 (evaluate_key/size<1>36)
+     LUT4:I0->O          267   0.551   3.394  evaluate_key/size<1>64 (key_size<1>)
+     LUT2:I1->O           96   0.551   2.415  key_combinational_shifter/Mmux_result121911 (N01)
+     LUT4:I1->O            1   0.551   0.000  key_combinational_shifter/Mmux_result_395 (key_combinational_shifter/Mmux_result_395)
+     MUXF5:I1->O           1   0.360   0.869  key_combinational_shifter/Mmux_result_2_f5_94 (next_key<99>)
+     LUT3:I2->O            1   0.551   0.000  key_multiplexer/output<99>1 (mux_output<99>)
+     FDCE:D                    0.203          key_register/reg_val_99
+    ----------------------------------------
+    Total                     19.094ns (6.979ns logic, 12.115ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              8.832ns (Levels of Logic = 2)
+  Source:            key_register/reg_val_31 (FF)
+  Destination:       round_key<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: key_register/reg_val_31 to round_key<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.720   1.116  key_register/reg_val_31 (key_register/reg_val_31)
+     LUT2:I1->O            1   0.551   0.801  Mxor_round_key_Result<31>1 (round_key_31_OBUF)
+     OBUF:I->O                 5.644          round_key_31_OBUF (round_key<31>)
+    ----------------------------------------
+    Total                      8.832ns (6.915ns logic, 1.917ns route)
+                                       (78.3% logic, 21.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Delay:               8.957ns (Levels of Logic = 3)
+  Source:            pi_lsb<31> (PAD)
+  Destination:       round_key<31> (PAD)
+
+  Data Path: pi_lsb<31> to round_key<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   1.140  pi_lsb_31_IBUF (pi_lsb_31_IBUF)
+     LUT2:I0->O            1   0.551   0.801  Mxor_round_key_Result<31>1 (round_key_31_OBUF)
+     OBUF:I->O                 5.644          round_key_31_OBUF (round_key<31>)
+    ----------------------------------------
+    Total                      8.957ns (7.016ns logic, 1.941ns route)
+                                       (78.3% logic, 21.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 22.29 secs
+ 
+--> 
+
+Total memory usage is 255932 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

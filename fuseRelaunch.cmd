@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/top_model_isim_beh.exe" -prj "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/top_model_beh.prj" "work.top_model" 

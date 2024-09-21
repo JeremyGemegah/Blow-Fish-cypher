@@ -1,0 +1,5 @@
+vhdl work "C:\Users\jerem\OneDrive\Desktop\projects\blowfish\register_448.vhd"
+vhdl work "C:\Users\jerem\OneDrive\Desktop\projects\blowfish\key_mux.vhd"
+vhdl work "C:\Users\jerem\OneDrive\Desktop\projects\blowfish\key_evaluator.vhd"
+vhdl work "C:\Users\jerem\OneDrive\Desktop\projects\blowfish\combinational_shifter.vhd"
+vhdl work "C:\Users\jerem\OneDrive\Desktop\projects\blowfish\key_generator.vhd"

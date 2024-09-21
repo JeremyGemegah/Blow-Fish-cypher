@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/key_expansion.xst" -ofn "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/key_expansion.syr" 

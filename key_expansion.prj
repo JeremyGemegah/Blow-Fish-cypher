@@ -1,0 +1,5 @@
+vhdl work "register_448.vhd"
+vhdl work "key_mux.vhd"
+vhdl work "key_evaluator.vhd"
+vhdl work "combinational_shifter.vhd"
+vhdl work "key_expansion.vhd"

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/new_sbox4.xst" -ofn "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/new_sbox4.syr" 

@@ -1,0 +1,1781 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: sbox_2.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "sbox_2.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "sbox_2"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : sbox_2
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/sbox_2.vhd" in Library work.
+Entity <sbox_2> compiled.
+Entity <sbox_2> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <sbox_2> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <sbox_2> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/sbox_2.vhd" line 78: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <input>
+Entity <sbox_2> analyzed. Unit <sbox_2> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <sbox_2>.
+    Related source file is "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/sbox_2.vhd".
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<4>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<14>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<9>_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<4>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<14>_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<9>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<4>_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<14>_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<9>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<4>_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<14>_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<9>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<4>_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<14>_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<9>_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<4>_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<9>_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<9>_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<9>_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<11>_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<11>_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<1>_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<11>_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<1>_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<11>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<1>_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<6>_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<11>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<1>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<6>_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<11>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<1>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<6>_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<11>_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<1>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<6>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<11>_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<1>_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<6>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<11>_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<1>_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<6>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<11>_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<1>_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<6>_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<1>_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<6>_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<6>_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<6>_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<13>_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<3>_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<13>_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<3>_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<13>_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<3>_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<13>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<8>_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<3>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<13>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<8>_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<3>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<13>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<8>_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<3>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<13>_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<8>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<3>_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<13>_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<8>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<3>_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<13>_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<8>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<3>_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<13>_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<8>_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<3>_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<8>_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<8>_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<8>_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<10>_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<10>_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<10>_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<0>_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<10>_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<10>_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<0>_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<15>_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<10>_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<10>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<0>_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<11>_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<15>_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<5>_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<10>_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<10>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<0>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<11>_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<15>_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<5>_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<10>_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<10>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<0>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<11>_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<15>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<5>_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<10>_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<10>_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<0>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<12>_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<11>_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<15>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<5>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<10>_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<0>_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<12>_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<11>_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<15>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<5>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<10>_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<0>_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<12>_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<11>_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<15>_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<0>_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<5>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<13>_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<10>_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<0>_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<12>_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<0>_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<15>_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<5>_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<13>_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<0>_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<12>_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<0>_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<15>_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<5>_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<13>_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<1>_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<12>_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<14>_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<0>_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<15>_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<5>_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<13>_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<1>_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<14>_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<0>_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<5>_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<13>_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<1>_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<14>_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<0>_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<2>_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<13>_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<15>_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<1>_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<14>_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<2>_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<15>_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<1>_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<14>_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<2>_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<15>_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<1>_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<3>_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<14>_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<12>_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<2>_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<15>_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<3>_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<2>_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<12>_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<2>_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<15>_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<3>_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<2>_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<12>_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<2>_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<4>_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<15>_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<3>_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<2>_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<12>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<4>_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<7>_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<3>_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<2>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<12>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<4>_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<7>_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<3>_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<2>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<12>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<5>_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<4>_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<7>_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<2>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<12>_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<5>_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<4>_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<7>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<2>_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<12>_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<5>_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<4>_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<7>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<6>_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<2>_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<12>_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<5>_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<7>_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<6>_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<2>_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<12>_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<5>_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<7>_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<6>_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<2>_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<5>_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<7>_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<7>_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<6>_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<7>_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<7>_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<6>_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<7>_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<7>_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<6>_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<8>_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<7>_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<8>_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<7>_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<8>_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<7>_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<9>_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<8>_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<9>_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<14>_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<8>_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<9>_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<4>_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<14>_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<8>_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<9>_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<4>_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<14>_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<9>_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<4>_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<14>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<9>_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<9>_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<4>_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<14>_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <myrom<9>_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit 16-to-1 multiplexer for signal <output>.
+    Found 32-bit 16-to-1 multiplexer for signal <myrom$mux0000>.
+    Found 32-bit 16-to-1 multiplexer for signal <myrom$mux0001>.
+    Found 32-bit 16-to-1 multiplexer for signal <myrom$mux0002>.
+    Found 32-bit 16-to-1 multiplexer for signal <myrom$mux0003>.
+    Found 32-bit 16-to-1 multiplexer for signal <myrom$mux0004>.
+    Found 32-bit 16-to-1 multiplexer for signal <myrom$mux0005>.
+    Found 32-bit 16-to-1 multiplexer for signal <myrom$mux0006>.
+    Found 32-bit 16-to-1 multiplexer for signal <myrom$mux0007>.
+    Found 32-bit 16-to-1 multiplexer for signal <myrom$mux0008>.
+    Found 32-bit 16-to-1 multiplexer for signal <myrom$mux0009>.
+    Found 32-bit 16-to-1 multiplexer for signal <myrom$mux0010>.
+    Found 32-bit 16-to-1 multiplexer for signal <myrom$mux0011>.
+    Found 32-bit 16-to-1 multiplexer for signal <myrom$mux0012>.
+    Found 32-bit 16-to-1 multiplexer for signal <myrom$mux0013>.
+    Found 32-bit 16-to-1 multiplexer for signal <myrom$mux0014>.
+    Found 32-bit 16-to-1 multiplexer for signal <myrom$mux0015>.
+    Summary:
+	inferred 544 Multiplexer(s).
+Unit <sbox_2> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Latches                                              : 256
+ 32-bit latch                                          : 256
+# Multiplexers                                         : 17
+ 32-bit 16-to-1 multiplexer                            : 17
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Latches                                              : 256
+ 32-bit latch                                          : 256
+# Multiplexers                                         : 17
+ 32-bit 16-to-1 multiplexer                            : 17
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <sbox_2> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block sbox_2, actual ratio is 358.
+Optimizing block <sbox_2> to meet ratio 100 (+ 5) of 1920 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <sbox_2>, final ratio is 358.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : sbox_2.ngr
+Top Level Output File Name         : sbox_2
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 73
+
+Cell Usage :
+# BELS                             : 8704
+#      LUT3                        : 4864
+#      LUT4                        : 32
+#      MUXF5                       : 2176
+#      MUXF6                       : 1088
+#      MUXF7                       : 544
+# FlipFlops/Latches                : 8192
+#      LDE                         : 7680
+#      LDE_1                       : 512
+# Clock Buffers                    : 8
+#      BUFG                        : 8
+# IO Buffers                       : 73
+#      IBUF                        : 41
+#      OBUF                        : 32
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                     6886  out of   1920   358% (*) 
+ Number of Slice Flip Flops:           8192  out of   3840   213% (*) 
+ Number of 4 input LUTs:               4896  out of   3840   127% (*) 
+ Number of IOs:                          73
+ Number of bonded IOBs:                  73  out of    173    42%  
+ Number of GCLKs:                         8  out of      8   100%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------+------------------------+-------+
+Clock Signal                                       | Clock buffer(FF name)  | Load  |
+---------------------------------------------------+------------------------+-------+
+myrom<9>_2_cmp_eq00011(myrom<9>_2_cmp_eq00011:O)   | BUFG(*)(myrom<9>_1_0)  | 512   |
+myrom<14>_5_cmp_eq00011(myrom<14>_5_cmp_eq00011:O) | BUFG(*)(myrom<14>_4_0) | 512   |
+myrom<4>_4_cmp_eq00011(myrom<4>_4_cmp_eq00011:O)   | BUFG(*)(myrom<4>_3_0)  | 512   |
+myrom<8>_0_cmp_eq00001(myrom<8>_0_cmp_eq00001:O)   | BUFG(*)(myrom<8>_15_0) | 512   |
+myrom<7>_0_cmp_eq00001(myrom<7>_0_cmp_eq00001:O)   | BUFG(*)(myrom<7>_15_0) | 512   |
+myrom<6>_0_cmp_eq00001(myrom<6>_0_cmp_eq00001:O)   | BUFG(*)(myrom<6>_15_0) | 512   |
+myrom<5>_0_cmp_eq00001(myrom<5>_0_cmp_eq00001:O)   | BUFG(*)(myrom<5>_15_0) | 512   |
+myrom<2>_10_cmp_eq00001(myrom<2>_10_cmp_eq00001:O) | BUFG(*)(myrom<2>_9_0)  | 512   |
+myrom<12>_10_cmp_eq0000(myrom<12>_10_cmp_eq00001:O)| NONE(*)(myrom<12>_9_0) | 512   |
+myrom<3>_0_cmp_eq0000(myrom<3>_0_cmp_eq00001:O)    | NONE(*)(myrom<3>_15_0) | 512   |
+myrom<15>_0_cmp_eq0000(myrom<15>_0_cmp_eq00001:O)  | NONE(*)(myrom<15>_15_0)| 512   |
+myrom<1>_0_cmp_eq0000(myrom<1>_0_cmp_eq00001:O)    | NONE(*)(myrom<1>_15_0) | 512   |
+myrom<13>_0_cmp_eq0000(myrom<13>_0_cmp_eq00001:O)  | NONE(*)(myrom<13>_15_0)| 512   |
+myrom<0>_0_not0001(myrom<0>_0_not00011:O)          | NONE(*)(myrom<0>_15_0) | 512   |
+myrom<10>_0_cmp_eq0000(myrom<10>_0_cmp_eq00001:O)  | NONE(*)(myrom<10>_9_0) | 512   |
+myrom<11>_0_cmp_eq0000(myrom<11>_0_cmp_eq00001:O)  | NONE(*)(myrom<11>_15_0)| 512   |
+---------------------------------------------------+------------------------+-------+
+(*) These 16 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 4.923ns (Maximum Frequency: 203.128MHz)
+   Minimum input arrival time before clock: 10.075ns
+   Maximum output required time after clock: 12.336ns
+   Maximum combinational path delay: 16.401ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'myrom<9>_2_cmp_eq00011'
+  Clock period: 4.796ns (frequency: 208.507MHz)
+  Total number of paths / destination ports: 512 / 512
+-------------------------------------------------------------------------
+Delay:               4.796ns (Levels of Logic = 5)
+  Source:            myrom<9>_1_0 (LATCH)
+  Destination:       myrom<9>_1_0 (LATCH)
+  Source Clock:      myrom<9>_2_cmp_eq00011 falling
+  Destination Clock: myrom<9>_2_cmp_eq00011 falling
+
+  Data Path: myrom<9>_1_0 to myrom<9>_1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.869  myrom<9>_1_0 (myrom<9>_1_0)
+     LUT3:I2->O            1   0.551   0.000  Mmux_myrom_mux0000_2_f7_71 (Mmux_myrom_mux0000_2_f7_7)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_myrom_mux0000_2_f7_5_f5 (Mmux_myrom_mux0000_2_f7_5_f5)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_myrom_mux0000_2_f7_3_f6 (Mmux_myrom_mux0000_2_f7_3_f6)
+     MUXF7:I1->O           2   0.342   0.945  Mmux_myrom_mux0000_2_f7_2_f7 (myrom_mux0001<0>)
+     LUT3:I2->O           16   0.551   0.000  myrom<11>_1_mux0000<0>1 (myrom<11>_1_mux0000<0>)
+     LDE:D                     0.203          myrom<9>_1_0
+    ----------------------------------------
+    Total                      4.796ns (2.982ns logic, 1.814ns route)
+                                       (62.2% logic, 37.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'myrom<14>_5_cmp_eq00011'
+  Clock period: 4.923ns (frequency: 203.128MHz)
+  Total number of paths / destination ports: 512 / 512
+-------------------------------------------------------------------------
+Delay:               4.923ns (Levels of Logic = 5)
+  Source:            myrom<14>_4_0 (LATCH)
+  Destination:       myrom<14>_4_0 (LATCH)
+  Source Clock:      myrom<14>_5_cmp_eq00011 falling
+  Destination Clock: myrom<14>_5_cmp_eq00011 falling
+
+  Data Path: myrom<14>_4_0 to myrom<14>_4_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.996  myrom<14>_4_0 (myrom<14>_4_0)
+     LUT3:I1->O            1   0.551   0.000  Mmux_myrom_mux0000_2_f7_597 (Mmux_myrom_mux0000_2_f7_596)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_myrom_mux0000_2_f7_4_f5_95 (Mmux_myrom_mux0000_2_f7_4_f596)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_myrom_mux0000_2_f7_3_f6_95 (Mmux_myrom_mux0000_2_f7_3_f696)
+     MUXF7:I1->O           2   0.342   0.945  Mmux_myrom_mux0000_2_f7_2_f7_95 (myrom_mux0004<0>)
+     LUT3:I2->O           16   0.551   0.000  myrom<4>_4_mux0000<0>1 (myrom<4>_4_mux0000<0>)
+     LDE:D                     0.203          myrom<14>_4_0
+    ----------------------------------------
+    Total                      4.923ns (2.982ns logic, 1.941ns route)
+                                       (60.6% logic, 39.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'myrom<4>_4_cmp_eq00011'
+  Clock period: 4.923ns (frequency: 203.128MHz)
+  Total number of paths / destination ports: 512 / 512
+-------------------------------------------------------------------------
+Delay:               4.923ns (Levels of Logic = 5)
+  Source:            myrom<4>_3_0 (LATCH)
+  Destination:       myrom<4>_3_0 (LATCH)
+  Source Clock:      myrom<4>_4_cmp_eq00011 falling
+  Destination Clock: myrom<4>_4_cmp_eq00011 falling
+
+  Data Path: myrom<4>_3_0 to myrom<4>_3_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.996  myrom<4>_3_0 (myrom<4>_3_0)
+     LUT3:I1->O            1   0.551   0.000  Mmux_myrom_mux0000_2_f7_7194 (Mmux_myrom_mux0000_2_f7_7193)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_myrom_mux0000_2_f7_5_f5_128 (Mmux_myrom_mux0000_2_f7_5_f5129)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_myrom_mux0000_2_f7_4_f6_63 (Mmux_myrom_mux0000_2_f7_4_f664)
+     MUXF7:I0->O           2   0.342   0.945  Mmux_myrom_mux0000_2_f7_2_f7_63 (myrom_mux0003<0>)
+     LUT3:I2->O           16   0.551   0.000  myrom<9>_3_mux0000<0>1 (myrom<9>_3_mux0000<0>)
+     LDE:D                     0.203          myrom<4>_3_0
+    ----------------------------------------
+    Total                      4.923ns (2.982ns logic, 1.941ns route)
+                                       (60.6% logic, 39.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'myrom<8>_0_cmp_eq00001'
+  Clock period: 4.923ns (frequency: 203.128MHz)
+  Total number of paths / destination ports: 512 / 512
+-------------------------------------------------------------------------
+Delay:               4.923ns (Levels of Logic = 5)
+  Source:            myrom<8>_15_0 (LATCH)
+  Destination:       myrom<8>_15_0 (LATCH)
+  Source Clock:      myrom<8>_0_cmp_eq00001 falling
+  Destination Clock: myrom<8>_0_cmp_eq00001 falling
+
+  Data Path: myrom<8>_15_0 to myrom<8>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.996  myrom<8>_15_0 (myrom<8>_15_0)
+     LUT3:I1->O            1   0.551   0.000  Mmux_myrom_mux0000_2_f7_71345 (Mmux_myrom_mux0000_2_f7_71344)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_myrom_mux0000_2_f7_5_f5_895 (Mmux_myrom_mux0000_2_f7_5_f5896)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_myrom_mux0000_2_f7_3_f6_447 (Mmux_myrom_mux0000_2_f7_3_f6448)
+     MUXF7:I1->O           2   0.342   0.945  Mmux_myrom_mux0000_2_f7_2_f7_447 (myrom_mux0015<0>)
+     LUT3:I2->O           16   0.551   0.000  myrom<10>_15_mux0000<0>1 (myrom<10>_15_mux0000<0>)
+     LDE:D                     0.203          myrom<8>_15_0
+    ----------------------------------------
+    Total                      4.923ns (2.982ns logic, 1.941ns route)
+                                       (60.6% logic, 39.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'myrom<7>_0_cmp_eq00001'
+  Clock period: 4.796ns (frequency: 208.507MHz)
+  Total number of paths / destination ports: 512 / 512
+-------------------------------------------------------------------------
+Delay:               4.796ns (Levels of Logic = 5)
+  Source:            myrom<7>_15_0 (LATCH)
+  Destination:       myrom<7>_15_0 (LATCH)
+  Source Clock:      myrom<7>_0_cmp_eq00001 falling
+  Destination Clock: myrom<7>_0_cmp_eq00001 falling
+
+  Data Path: myrom<7>_15_0 to myrom<7>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.869  myrom<7>_15_0 (myrom<7>_15_0)
+     LUT3:I2->O            1   0.551   0.000  Mmux_myrom_mux0000_2_f7_61347 (Mmux_myrom_mux0000_2_f7_61346)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_myrom_mux0000_2_f7_5_f5_896 (Mmux_myrom_mux0000_2_f7_5_f5897)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_myrom_mux0000_2_f7_4_f6_447 (Mmux_myrom_mux0000_2_f7_4_f6448)
+     MUXF7:I0->O           2   0.342   0.945  Mmux_myrom_mux0000_2_f7_2_f7_447 (myrom_mux0015<0>)
+     LUT3:I2->O           16   0.551   0.000  myrom<10>_15_mux0000<0>1 (myrom<10>_15_mux0000<0>)
+     LDE:D                     0.203          myrom<7>_15_0
+    ----------------------------------------
+    Total                      4.796ns (2.982ns logic, 1.814ns route)
+                                       (62.2% logic, 37.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'myrom<6>_0_cmp_eq00001'
+  Clock period: 4.923ns (frequency: 203.128MHz)
+  Total number of paths / destination ports: 512 / 512
+-------------------------------------------------------------------------
+Delay:               4.923ns (Levels of Logic = 5)
+  Source:            myrom<6>_15_0 (LATCH)
+  Destination:       myrom<6>_15_0 (LATCH)
+  Source Clock:      myrom<6>_0_cmp_eq00001 falling
+  Destination Clock: myrom<6>_0_cmp_eq00001 falling
+
+  Data Path: myrom<6>_15_0 to myrom<6>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.996  myrom<6>_15_0 (myrom<6>_15_0)
+     LUT3:I1->O            1   0.551   0.000  Mmux_myrom_mux0000_2_f7_61347 (Mmux_myrom_mux0000_2_f7_61346)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_myrom_mux0000_2_f7_5_f5_896 (Mmux_myrom_mux0000_2_f7_5_f5897)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_myrom_mux0000_2_f7_4_f6_447 (Mmux_myrom_mux0000_2_f7_4_f6448)
+     MUXF7:I0->O           2   0.342   0.945  Mmux_myrom_mux0000_2_f7_2_f7_447 (myrom_mux0015<0>)
+     LUT3:I2->O           16   0.551   0.000  myrom<10>_15_mux0000<0>1 (myrom<10>_15_mux0000<0>)
+     LDE:D                     0.203          myrom<6>_15_0
+    ----------------------------------------
+    Total                      4.923ns (2.982ns logic, 1.941ns route)
+                                       (60.6% logic, 39.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'myrom<5>_0_cmp_eq00001'
+  Clock period: 4.796ns (frequency: 208.507MHz)
+  Total number of paths / destination ports: 512 / 512
+-------------------------------------------------------------------------
+Delay:               4.796ns (Levels of Logic = 5)
+  Source:            myrom<5>_15_0 (LATCH)
+  Destination:       myrom<5>_15_0 (LATCH)
+  Source Clock:      myrom<5>_0_cmp_eq00001 falling
+  Destination Clock: myrom<5>_0_cmp_eq00001 falling
+
+  Data Path: myrom<5>_15_0 to myrom<5>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.869  myrom<5>_15_0 (myrom<5>_15_0)
+     LUT3:I2->O            1   0.551   0.000  Mmux_myrom_mux0000_2_f7_71346 (Mmux_myrom_mux0000_2_f7_71345)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_myrom_mux0000_2_f7_5_f5_896 (Mmux_myrom_mux0000_2_f7_5_f5897)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_myrom_mux0000_2_f7_4_f6_447 (Mmux_myrom_mux0000_2_f7_4_f6448)
+     MUXF7:I0->O           2   0.342   0.945  Mmux_myrom_mux0000_2_f7_2_f7_447 (myrom_mux0015<0>)
+     LUT3:I2->O           16   0.551   0.000  myrom<10>_15_mux0000<0>1 (myrom<10>_15_mux0000<0>)
+     LDE:D                     0.203          myrom<5>_15_0
+    ----------------------------------------
+    Total                      4.796ns (2.982ns logic, 1.814ns route)
+                                       (62.2% logic, 37.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'myrom<2>_10_cmp_eq00001'
+  Clock period: 4.923ns (frequency: 203.128MHz)
+  Total number of paths / destination ports: 512 / 512
+-------------------------------------------------------------------------
+Delay:               4.923ns (Levels of Logic = 5)
+  Source:            myrom<2>_9_0 (LATCH)
+  Destination:       myrom<2>_9_0 (LATCH)
+  Source Clock:      myrom<2>_10_cmp_eq00001 falling
+  Destination Clock: myrom<2>_10_cmp_eq00001 falling
+
+  Data Path: myrom<2>_9_0 to myrom<2>_9_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.996  myrom<2>_9_0 (myrom<2>_9_0)
+     LUT3:I1->O            1   0.551   0.000  Mmux_myrom_mux0000_2_f7_7771 (Mmux_myrom_mux0000_2_f7_7770)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_myrom_mux0000_2_f7_6_f5_255 (Mmux_myrom_mux0000_2_f7_6_f5256)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_myrom_mux0000_2_f7_4_f6_255 (Mmux_myrom_mux0000_2_f7_4_f6256)
+     MUXF7:I0->O           2   0.342   0.945  Mmux_myrom_mux0000_2_f7_2_f7_255 (myrom_mux0009<0>)
+     LUT3:I2->O           16   0.551   0.000  myrom<14>_9_mux0000<0>1 (myrom<14>_9_mux0000<0>)
+     LDE:D                     0.203          myrom<2>_9_0
+    ----------------------------------------
+    Total                      4.923ns (2.982ns logic, 1.941ns route)
+                                       (60.6% logic, 39.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'myrom<12>_10_cmp_eq0000'
+  Clock period: 4.923ns (frequency: 203.128MHz)
+  Total number of paths / destination ports: 512 / 512
+-------------------------------------------------------------------------
+Delay:               4.923ns (Levels of Logic = 5)
+  Source:            myrom<12>_9_0 (LATCH)
+  Destination:       myrom<12>_9_0 (LATCH)
+  Source Clock:      myrom<12>_10_cmp_eq0000 falling
+  Destination Clock: myrom<12>_10_cmp_eq0000 falling
+
+  Data Path: myrom<12>_9_0 to myrom<12>_9_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.996  myrom<12>_9_0 (myrom<12>_9_0)
+     LUT3:I1->O            1   0.551   0.000  Mmux_myrom_mux0000_2_f7_6769 (Mmux_myrom_mux0000_2_f7_6768)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_myrom_mux0000_2_f7_4_f5_255 (Mmux_myrom_mux0000_2_f7_4_f5256)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_myrom_mux0000_2_f7_3_f6_255 (Mmux_myrom_mux0000_2_f7_3_f6256)
+     MUXF7:I1->O           2   0.342   0.945  Mmux_myrom_mux0000_2_f7_2_f7_255 (myrom_mux0009<0>)
+     LUT3:I2->O           16   0.551   0.000  myrom<14>_9_mux0000<0>1 (myrom<14>_9_mux0000<0>)
+     LDE:D                     0.203          myrom<12>_9_0
+    ----------------------------------------
+    Total                      4.923ns (2.982ns logic, 1.941ns route)
+                                       (60.6% logic, 39.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'myrom<3>_0_cmp_eq0000'
+  Clock period: 4.796ns (frequency: 208.507MHz)
+  Total number of paths / destination ports: 512 / 512
+-------------------------------------------------------------------------
+Delay:               4.796ns (Levels of Logic = 5)
+  Source:            myrom<3>_15_0 (LATCH)
+  Destination:       myrom<3>_15_0 (LATCH)
+  Source Clock:      myrom<3>_0_cmp_eq0000 falling
+  Destination Clock: myrom<3>_0_cmp_eq0000 falling
+
+  Data Path: myrom<3>_15_0 to myrom<3>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.869  myrom<3>_15_0 (myrom<3>_15_0)
+     LUT3:I2->O            1   0.551   0.000  Mmux_myrom_mux0000_2_f7_71347 (Mmux_myrom_mux0000_2_f7_71346)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_myrom_mux0000_2_f7_6_f5_447 (Mmux_myrom_mux0000_2_f7_6_f5448)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_myrom_mux0000_2_f7_4_f6_447 (Mmux_myrom_mux0000_2_f7_4_f6448)
+     MUXF7:I0->O           2   0.342   0.945  Mmux_myrom_mux0000_2_f7_2_f7_447 (myrom_mux0015<0>)
+     LUT3:I2->O           16   0.551   0.000  myrom<10>_15_mux0000<0>1 (myrom<10>_15_mux0000<0>)
+     LDE:D                     0.203          myrom<3>_15_0
+    ----------------------------------------
+    Total                      4.796ns (2.982ns logic, 1.814ns route)
+                                       (62.2% logic, 37.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'myrom<15>_0_cmp_eq0000'
+  Clock period: 4.796ns (frequency: 208.507MHz)
+  Total number of paths / destination ports: 512 / 512
+-------------------------------------------------------------------------
+Delay:               4.796ns (Levels of Logic = 5)
+  Source:            myrom<15>_15_0 (LATCH)
+  Destination:       myrom<15>_15_0 (LATCH)
+  Source Clock:      myrom<15>_0_cmp_eq0000 falling
+  Destination Clock: myrom<15>_0_cmp_eq0000 falling
+
+  Data Path: myrom<15>_15_0 to myrom<15>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.869  myrom<15>_15_0 (myrom<15>_15_0)
+     LUT3:I2->O            1   0.551   0.000  Mmux_myrom_mux0000_2_f7_5449 (Mmux_myrom_mux0000_2_f7_5448)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_myrom_mux0000_2_f7_4_f5_447 (Mmux_myrom_mux0000_2_f7_4_f5448)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_myrom_mux0000_2_f7_3_f6_447 (Mmux_myrom_mux0000_2_f7_3_f6448)
+     MUXF7:I1->O           2   0.342   0.945  Mmux_myrom_mux0000_2_f7_2_f7_447 (myrom_mux0015<0>)
+     LUT3:I2->O           16   0.551   0.000  myrom<10>_15_mux0000<0>1 (myrom<10>_15_mux0000<0>)
+     LDE:D                     0.203          myrom<15>_15_0
+    ----------------------------------------
+    Total                      4.796ns (2.982ns logic, 1.814ns route)
+                                       (62.2% logic, 37.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'myrom<1>_0_cmp_eq0000'
+  Clock period: 4.796ns (frequency: 208.507MHz)
+  Total number of paths / destination ports: 512 / 512
+-------------------------------------------------------------------------
+Delay:               4.796ns (Levels of Logic = 5)
+  Source:            myrom<1>_15_0 (LATCH)
+  Destination:       myrom<1>_15_0 (LATCH)
+  Source Clock:      myrom<1>_0_cmp_eq0000 falling
+  Destination Clock: myrom<1>_0_cmp_eq0000 falling
+
+  Data Path: myrom<1>_15_0 to myrom<1>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.869  myrom<1>_15_0 (myrom<1>_15_0)
+     LUT3:I2->O            1   0.551   0.000  Mmux_myrom_mux0000_2_f7_8449 (Mmux_myrom_mux0000_2_f7_8448)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_myrom_mux0000_2_f7_6_f5_447 (Mmux_myrom_mux0000_2_f7_6_f5448)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_myrom_mux0000_2_f7_4_f6_447 (Mmux_myrom_mux0000_2_f7_4_f6448)
+     MUXF7:I0->O           2   0.342   0.945  Mmux_myrom_mux0000_2_f7_2_f7_447 (myrom_mux0015<0>)
+     LUT3:I2->O           16   0.551   0.000  myrom<10>_15_mux0000<0>1 (myrom<10>_15_mux0000<0>)
+     LDE:D                     0.203          myrom<1>_15_0
+    ----------------------------------------
+    Total                      4.796ns (2.982ns logic, 1.814ns route)
+                                       (62.2% logic, 37.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'myrom<13>_0_cmp_eq0000'
+  Clock period: 4.796ns (frequency: 208.507MHz)
+  Total number of paths / destination ports: 512 / 512
+-------------------------------------------------------------------------
+Delay:               4.796ns (Levels of Logic = 5)
+  Source:            myrom<13>_15_0 (LATCH)
+  Destination:       myrom<13>_15_0 (LATCH)
+  Source Clock:      myrom<13>_0_cmp_eq0000 falling
+  Destination Clock: myrom<13>_0_cmp_eq0000 falling
+
+  Data Path: myrom<13>_15_0 to myrom<13>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.869  myrom<13>_15_0 (myrom<13>_15_0)
+     LUT3:I2->O            1   0.551   0.000  Mmux_myrom_mux0000_2_f7_61345 (Mmux_myrom_mux0000_2_f7_61344)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_myrom_mux0000_2_f7_4_f5_447 (Mmux_myrom_mux0000_2_f7_4_f5448)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_myrom_mux0000_2_f7_3_f6_447 (Mmux_myrom_mux0000_2_f7_3_f6448)
+     MUXF7:I1->O           2   0.342   0.945  Mmux_myrom_mux0000_2_f7_2_f7_447 (myrom_mux0015<0>)
+     LUT3:I2->O           16   0.551   0.000  myrom<10>_15_mux0000<0>1 (myrom<10>_15_mux0000<0>)
+     LDE:D                     0.203          myrom<13>_15_0
+    ----------------------------------------
+    Total                      4.796ns (2.982ns logic, 1.814ns route)
+                                       (62.2% logic, 37.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'myrom<0>_0_not0001'
+  Clock period: 4.923ns (frequency: 203.128MHz)
+  Total number of paths / destination ports: 512 / 512
+-------------------------------------------------------------------------
+Delay:               4.923ns (Levels of Logic = 5)
+  Source:            myrom<0>_15_0 (LATCH)
+  Destination:       myrom<0>_15_0 (LATCH)
+  Source Clock:      myrom<0>_0_not0001 rising
+  Destination Clock: myrom<0>_0_not0001 rising
+
+  Data Path: myrom<0>_15_0 to myrom<0>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q            1   0.633   0.996  myrom<0>_15_0 (myrom<0>_15_0)
+     LUT3:I1->O            1   0.551   0.000  Mmux_myrom_mux0000_2_f7_8449 (Mmux_myrom_mux0000_2_f7_8448)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_myrom_mux0000_2_f7_6_f5_447 (Mmux_myrom_mux0000_2_f7_6_f5448)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_myrom_mux0000_2_f7_4_f6_447 (Mmux_myrom_mux0000_2_f7_4_f6448)
+     MUXF7:I0->O           2   0.342   0.945  Mmux_myrom_mux0000_2_f7_2_f7_447 (myrom_mux0015<0>)
+     LUT3:I2->O           16   0.551   0.000  myrom<10>_15_mux0000<0>1 (myrom<10>_15_mux0000<0>)
+     LDE_1:D                   0.203          myrom<0>_15_0
+    ----------------------------------------
+    Total                      4.923ns (2.982ns logic, 1.941ns route)
+                                       (60.6% logic, 39.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'myrom<10>_0_cmp_eq0000'
+  Clock period: 4.923ns (frequency: 203.128MHz)
+  Total number of paths / destination ports: 512 / 512
+-------------------------------------------------------------------------
+Delay:               4.923ns (Levels of Logic = 5)
+  Source:            myrom<10>_9_0 (LATCH)
+  Destination:       myrom<10>_9_0 (LATCH)
+  Source Clock:      myrom<10>_0_cmp_eq0000 falling
+  Destination Clock: myrom<10>_0_cmp_eq0000 falling
+
+  Data Path: myrom<10>_9_0 to myrom<10>_9_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.996  myrom<10>_9_0 (myrom<10>_9_0)
+     LUT3:I1->O            1   0.551   0.000  Mmux_myrom_mux0000_2_f7_6770 (Mmux_myrom_mux0000_2_f7_6769)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_myrom_mux0000_2_f7_5_f5_511 (Mmux_myrom_mux0000_2_f7_5_f5512)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_myrom_mux0000_2_f7_3_f6_255 (Mmux_myrom_mux0000_2_f7_3_f6256)
+     MUXF7:I1->O           2   0.342   0.945  Mmux_myrom_mux0000_2_f7_2_f7_255 (myrom_mux0009<0>)
+     LUT3:I2->O           16   0.551   0.000  myrom<14>_9_mux0000<0>1 (myrom<14>_9_mux0000<0>)
+     LDE:D                     0.203          myrom<10>_9_0
+    ----------------------------------------
+    Total                      4.923ns (2.982ns logic, 1.941ns route)
+                                       (60.6% logic, 39.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'myrom<11>_0_cmp_eq0000'
+  Clock period: 4.796ns (frequency: 208.507MHz)
+  Total number of paths / destination ports: 512 / 512
+-------------------------------------------------------------------------
+Delay:               4.796ns (Levels of Logic = 5)
+  Source:            myrom<11>_15_0 (LATCH)
+  Destination:       myrom<11>_15_0 (LATCH)
+  Source Clock:      myrom<11>_0_cmp_eq0000 falling
+  Destination Clock: myrom<11>_0_cmp_eq0000 falling
+
+  Data Path: myrom<11>_15_0 to myrom<11>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.869  myrom<11>_15_0 (myrom<11>_15_0)
+     LUT3:I2->O            1   0.551   0.000  Mmux_myrom_mux0000_2_f7_61346 (Mmux_myrom_mux0000_2_f7_61345)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_myrom_mux0000_2_f7_5_f5_895 (Mmux_myrom_mux0000_2_f7_5_f5896)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_myrom_mux0000_2_f7_3_f6_447 (Mmux_myrom_mux0000_2_f7_3_f6448)
+     MUXF7:I1->O           2   0.342   0.945  Mmux_myrom_mux0000_2_f7_2_f7_447 (myrom_mux0015<0>)
+     LUT3:I2->O           16   0.551   0.000  myrom<10>_15_mux0000<0>1 (myrom<10>_15_mux0000<0>)
+     LDE:D                     0.203          myrom<11>_15_0
+    ----------------------------------------
+    Total                      4.796ns (2.982ns logic, 1.814ns route)
+                                       (62.2% logic, 37.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'myrom<9>_2_cmp_eq00011'
+  Total number of paths / destination ports: 10752 / 1024
+-------------------------------------------------------------------------
+Offset:              10.075ns (Levels of Logic = 2)
+  Source:            address<0> (PAD)
+  Destination:       myrom<9>_15_0 (LATCH)
+  Destination Clock: myrom<9>_2_cmp_eq00011 falling
+
+  Data Path: address<0> to myrom<9>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           272   0.821   3.567  address_0_IBUF (address_0_IBUF)
+     LUT4:I0->O          512   0.551   4.534  myrom<9>_3_cmp_eq00001 (myrom<9>_3_cmp_eq0000)
+     LDE:GE                    0.602          myrom<9>_3_31
+    ----------------------------------------
+    Total                     10.075ns (1.974ns logic, 8.101ns route)
+                                       (19.6% logic, 80.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'myrom<14>_5_cmp_eq00011'
+  Total number of paths / destination ports: 10752 / 1024
+-------------------------------------------------------------------------
+Offset:              10.075ns (Levels of Logic = 2)
+  Source:            address<0> (PAD)
+  Destination:       myrom<14>_4_0 (LATCH)
+  Destination Clock: myrom<14>_5_cmp_eq00011 falling
+
+  Data Path: address<0> to myrom<14>_4_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           272   0.821   3.567  address_0_IBUF (address_0_IBUF)
+     LUT4:I0->O          512   0.551   4.534  myrom<9>_3_cmp_eq00001 (myrom<9>_3_cmp_eq0000)
+     LDE:GE                    0.602          myrom<14>_3_31
+    ----------------------------------------
+    Total                     10.075ns (1.974ns logic, 8.101ns route)
+                                       (19.6% logic, 80.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'myrom<4>_4_cmp_eq00011'
+  Total number of paths / destination ports: 10752 / 1024
+-------------------------------------------------------------------------
+Offset:              10.075ns (Levels of Logic = 2)
+  Source:            address<0> (PAD)
+  Destination:       myrom<4>_3_0 (LATCH)
+  Destination Clock: myrom<4>_4_cmp_eq00011 falling
+
+  Data Path: address<0> to myrom<4>_3_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           272   0.821   3.567  address_0_IBUF (address_0_IBUF)
+     LUT4:I0->O          512   0.551   4.534  myrom<9>_3_cmp_eq00001 (myrom<9>_3_cmp_eq0000)
+     LDE:GE                    0.602          myrom<4>_3_31
+    ----------------------------------------
+    Total                     10.075ns (1.974ns logic, 8.101ns route)
+                                       (19.6% logic, 80.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'myrom<8>_0_cmp_eq00001'
+  Total number of paths / destination ports: 10752 / 1024
+-------------------------------------------------------------------------
+Offset:              10.075ns (Levels of Logic = 2)
+  Source:            address<0> (PAD)
+  Destination:       myrom<8>_15_0 (LATCH)
+  Destination Clock: myrom<8>_0_cmp_eq00001 falling
+
+  Data Path: address<0> to myrom<8>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           272   0.821   3.567  address_0_IBUF (address_0_IBUF)
+     LUT4:I0->O          512   0.551   4.534  myrom<9>_3_cmp_eq00001 (myrom<9>_3_cmp_eq0000)
+     LDE:GE                    0.602          myrom<8>_3_31
+    ----------------------------------------
+    Total                     10.075ns (1.974ns logic, 8.101ns route)
+                                       (19.6% logic, 80.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'myrom<7>_0_cmp_eq00001'
+  Total number of paths / destination ports: 10752 / 1024
+-------------------------------------------------------------------------
+Offset:              10.075ns (Levels of Logic = 2)
+  Source:            address<0> (PAD)
+  Destination:       myrom<7>_15_0 (LATCH)
+  Destination Clock: myrom<7>_0_cmp_eq00001 falling
+
+  Data Path: address<0> to myrom<7>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           272   0.821   3.567  address_0_IBUF (address_0_IBUF)
+     LUT4:I0->O          512   0.551   4.534  myrom<9>_3_cmp_eq00001 (myrom<9>_3_cmp_eq0000)
+     LDE:GE                    0.602          myrom<7>_3_31
+    ----------------------------------------
+    Total                     10.075ns (1.974ns logic, 8.101ns route)
+                                       (19.6% logic, 80.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'myrom<6>_0_cmp_eq00001'
+  Total number of paths / destination ports: 10752 / 1024
+-------------------------------------------------------------------------
+Offset:              10.075ns (Levels of Logic = 2)
+  Source:            address<0> (PAD)
+  Destination:       myrom<6>_15_0 (LATCH)
+  Destination Clock: myrom<6>_0_cmp_eq00001 falling
+
+  Data Path: address<0> to myrom<6>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           272   0.821   3.567  address_0_IBUF (address_0_IBUF)
+     LUT4:I0->O          512   0.551   4.534  myrom<9>_3_cmp_eq00001 (myrom<9>_3_cmp_eq0000)
+     LDE:GE                    0.602          myrom<6>_3_31
+    ----------------------------------------
+    Total                     10.075ns (1.974ns logic, 8.101ns route)
+                                       (19.6% logic, 80.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'myrom<5>_0_cmp_eq00001'
+  Total number of paths / destination ports: 10752 / 1024
+-------------------------------------------------------------------------
+Offset:              10.075ns (Levels of Logic = 2)
+  Source:            address<0> (PAD)
+  Destination:       myrom<5>_15_0 (LATCH)
+  Destination Clock: myrom<5>_0_cmp_eq00001 falling
+
+  Data Path: address<0> to myrom<5>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           272   0.821   3.567  address_0_IBUF (address_0_IBUF)
+     LUT4:I0->O          512   0.551   4.534  myrom<9>_3_cmp_eq00001 (myrom<9>_3_cmp_eq0000)
+     LDE:GE                    0.602          myrom<5>_3_31
+    ----------------------------------------
+    Total                     10.075ns (1.974ns logic, 8.101ns route)
+                                       (19.6% logic, 80.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'myrom<2>_10_cmp_eq00001'
+  Total number of paths / destination ports: 10752 / 1024
+-------------------------------------------------------------------------
+Offset:              10.075ns (Levels of Logic = 2)
+  Source:            address<0> (PAD)
+  Destination:       myrom<2>_9_0 (LATCH)
+  Destination Clock: myrom<2>_10_cmp_eq00001 falling
+
+  Data Path: address<0> to myrom<2>_9_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           272   0.821   3.567  address_0_IBUF (address_0_IBUF)
+     LUT4:I0->O          512   0.551   4.534  myrom<9>_3_cmp_eq00001 (myrom<9>_3_cmp_eq0000)
+     LDE:GE                    0.602          myrom<2>_3_31
+    ----------------------------------------
+    Total                     10.075ns (1.974ns logic, 8.101ns route)
+                                       (19.6% logic, 80.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'myrom<12>_10_cmp_eq0000'
+  Total number of paths / destination ports: 10752 / 1024
+-------------------------------------------------------------------------
+Offset:              10.075ns (Levels of Logic = 2)
+  Source:            address<0> (PAD)
+  Destination:       myrom<12>_9_0 (LATCH)
+  Destination Clock: myrom<12>_10_cmp_eq0000 falling
+
+  Data Path: address<0> to myrom<12>_9_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           272   0.821   3.567  address_0_IBUF (address_0_IBUF)
+     LUT4:I0->O          512   0.551   4.534  myrom<9>_3_cmp_eq00001 (myrom<9>_3_cmp_eq0000)
+     LDE:GE                    0.602          myrom<12>_3_31
+    ----------------------------------------
+    Total                     10.075ns (1.974ns logic, 8.101ns route)
+                                       (19.6% logic, 80.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'myrom<3>_0_cmp_eq0000'
+  Total number of paths / destination ports: 10752 / 1024
+-------------------------------------------------------------------------
+Offset:              10.075ns (Levels of Logic = 2)
+  Source:            address<0> (PAD)
+  Destination:       myrom<3>_15_0 (LATCH)
+  Destination Clock: myrom<3>_0_cmp_eq0000 falling
+
+  Data Path: address<0> to myrom<3>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           272   0.821   3.567  address_0_IBUF (address_0_IBUF)
+     LUT4:I0->O          512   0.551   4.534  myrom<9>_3_cmp_eq00001 (myrom<9>_3_cmp_eq0000)
+     LDE:GE                    0.602          myrom<3>_3_31
+    ----------------------------------------
+    Total                     10.075ns (1.974ns logic, 8.101ns route)
+                                       (19.6% logic, 80.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'myrom<15>_0_cmp_eq0000'
+  Total number of paths / destination ports: 10752 / 1024
+-------------------------------------------------------------------------
+Offset:              10.075ns (Levels of Logic = 2)
+  Source:            address<0> (PAD)
+  Destination:       myrom<15>_15_0 (LATCH)
+  Destination Clock: myrom<15>_0_cmp_eq0000 falling
+
+  Data Path: address<0> to myrom<15>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           272   0.821   3.567  address_0_IBUF (address_0_IBUF)
+     LUT4:I0->O          512   0.551   4.534  myrom<9>_3_cmp_eq00001 (myrom<9>_3_cmp_eq0000)
+     LDE:GE                    0.602          myrom<15>_3_31
+    ----------------------------------------
+    Total                     10.075ns (1.974ns logic, 8.101ns route)
+                                       (19.6% logic, 80.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'myrom<1>_0_cmp_eq0000'
+  Total number of paths / destination ports: 10752 / 1024
+-------------------------------------------------------------------------
+Offset:              10.075ns (Levels of Logic = 2)
+  Source:            address<0> (PAD)
+  Destination:       myrom<1>_15_0 (LATCH)
+  Destination Clock: myrom<1>_0_cmp_eq0000 falling
+
+  Data Path: address<0> to myrom<1>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           272   0.821   3.567  address_0_IBUF (address_0_IBUF)
+     LUT4:I0->O          512   0.551   4.534  myrom<9>_3_cmp_eq00001 (myrom<9>_3_cmp_eq0000)
+     LDE:GE                    0.602          myrom<1>_3_31
+    ----------------------------------------
+    Total                     10.075ns (1.974ns logic, 8.101ns route)
+                                       (19.6% logic, 80.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'myrom<13>_0_cmp_eq0000'
+  Total number of paths / destination ports: 10752 / 1024
+-------------------------------------------------------------------------
+Offset:              10.075ns (Levels of Logic = 2)
+  Source:            address<0> (PAD)
+  Destination:       myrom<13>_15_0 (LATCH)
+  Destination Clock: myrom<13>_0_cmp_eq0000 falling
+
+  Data Path: address<0> to myrom<13>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           272   0.821   3.567  address_0_IBUF (address_0_IBUF)
+     LUT4:I0->O          512   0.551   4.534  myrom<9>_3_cmp_eq00001 (myrom<9>_3_cmp_eq0000)
+     LDE:GE                    0.602          myrom<13>_3_31
+    ----------------------------------------
+    Total                     10.075ns (1.974ns logic, 8.101ns route)
+                                       (19.6% logic, 80.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'myrom<0>_0_not0001'
+  Total number of paths / destination ports: 10752 / 1024
+-------------------------------------------------------------------------
+Offset:              10.075ns (Levels of Logic = 2)
+  Source:            address<0> (PAD)
+  Destination:       myrom<0>_15_0 (LATCH)
+  Destination Clock: myrom<0>_0_not0001 rising
+
+  Data Path: address<0> to myrom<0>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           272   0.821   3.567  address_0_IBUF (address_0_IBUF)
+     LUT4:I0->O          512   0.551   4.534  myrom<9>_3_cmp_eq00001 (myrom<9>_3_cmp_eq0000)
+     LDE_1:GE                  0.602          myrom<0>_3_31
+    ----------------------------------------
+    Total                     10.075ns (1.974ns logic, 8.101ns route)
+                                       (19.6% logic, 80.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'myrom<10>_0_cmp_eq0000'
+  Total number of paths / destination ports: 10752 / 1024
+-------------------------------------------------------------------------
+Offset:              10.075ns (Levels of Logic = 2)
+  Source:            address<0> (PAD)
+  Destination:       myrom<10>_9_0 (LATCH)
+  Destination Clock: myrom<10>_0_cmp_eq0000 falling
+
+  Data Path: address<0> to myrom<10>_9_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           272   0.821   3.567  address_0_IBUF (address_0_IBUF)
+     LUT4:I0->O          512   0.551   4.534  myrom<9>_3_cmp_eq00001 (myrom<9>_3_cmp_eq0000)
+     LDE:GE                    0.602          myrom<10>_3_31
+    ----------------------------------------
+    Total                     10.075ns (1.974ns logic, 8.101ns route)
+                                       (19.6% logic, 80.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'myrom<11>_0_cmp_eq0000'
+  Total number of paths / destination ports: 10752 / 1024
+-------------------------------------------------------------------------
+Offset:              10.075ns (Levels of Logic = 2)
+  Source:            address<0> (PAD)
+  Destination:       myrom<11>_15_0 (LATCH)
+  Destination Clock: myrom<11>_0_cmp_eq0000 falling
+
+  Data Path: address<0> to myrom<11>_15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           272   0.821   3.567  address_0_IBUF (address_0_IBUF)
+     LUT4:I0->O          512   0.551   4.534  myrom<9>_3_cmp_eq00001 (myrom<9>_3_cmp_eq0000)
+     LDE:GE                    0.602          myrom<11>_3_31
+    ----------------------------------------
+    Total                     10.075ns (1.974ns logic, 8.101ns route)
+                                       (19.6% logic, 80.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myrom<0>_0_not0001'
+  Total number of paths / destination ports: 512 / 32
+-------------------------------------------------------------------------
+Offset:              12.336ns (Levels of Logic = 9)
+  Source:            myrom<0>_0_31 (LATCH)
+  Destination:       output<31> (PAD)
+  Source Clock:      myrom<0>_0_not0001 rising
+
+  Data Path: myrom<0>_0_31 to output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q            1   0.633   0.996  myrom<0>_0_31 (myrom<0>_0_31)
+     LUT3:I1->O            1   0.551   0.000  Mmux_myrom_mux0000_824 (Mmux_myrom_mux0000_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_myrom_mux0000_6_f5_23 (Mmux_myrom_mux0000_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_myrom_mux0000_4_f6_23 (Mmux_myrom_mux0000_4_f624)
+     MUXF7:I0->O           2   0.342   1.072  Mmux_myrom_mux0000_2_f7_23 (myrom_mux0000<31>)
+     LUT3:I1->O            1   0.551   0.000  Mmux_output_824 (Mmux_output_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_output_6_f5_23 (Mmux_output_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_output_4_f6_23 (Mmux_output_4_f624)
+     MUXF7:I0->O           1   0.342   0.801  Mmux_output_2_f7_23 (output_31_OBUF)
+     OBUF:I->O                 5.644          output_31_OBUF (output<31>)
+    ----------------------------------------
+    Total                     12.336ns (9.467ns logic, 2.869ns route)
+                                       (76.7% logic, 23.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myrom<1>_0_cmp_eq0000'
+  Total number of paths / destination ports: 512 / 32
+-------------------------------------------------------------------------
+Offset:              12.209ns (Levels of Logic = 9)
+  Source:            myrom<1>_0_31 (LATCH)
+  Destination:       output<31> (PAD)
+  Source Clock:      myrom<1>_0_cmp_eq0000 falling
+
+  Data Path: myrom<1>_0_31 to output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.869  myrom<1>_0_31 (myrom<1>_0_31)
+     LUT3:I2->O            1   0.551   0.000  Mmux_myrom_mux0000_824 (Mmux_myrom_mux0000_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_myrom_mux0000_6_f5_23 (Mmux_myrom_mux0000_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_myrom_mux0000_4_f6_23 (Mmux_myrom_mux0000_4_f624)
+     MUXF7:I0->O           2   0.342   1.072  Mmux_myrom_mux0000_2_f7_23 (myrom_mux0000<31>)
+     LUT3:I1->O            1   0.551   0.000  Mmux_output_824 (Mmux_output_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_output_6_f5_23 (Mmux_output_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_output_4_f6_23 (Mmux_output_4_f624)
+     MUXF7:I0->O           1   0.342   0.801  Mmux_output_2_f7_23 (output_31_OBUF)
+     OBUF:I->O                 5.644          output_31_OBUF (output<31>)
+    ----------------------------------------
+    Total                     12.209ns (9.467ns logic, 2.742ns route)
+                                       (77.5% logic, 22.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myrom<2>_10_cmp_eq00001'
+  Total number of paths / destination ports: 512 / 32
+-------------------------------------------------------------------------
+Offset:              12.336ns (Levels of Logic = 9)
+  Source:            myrom<2>_0_31 (LATCH)
+  Destination:       output<31> (PAD)
+  Source Clock:      myrom<2>_10_cmp_eq00001 falling
+
+  Data Path: myrom<2>_0_31 to output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.996  myrom<2>_0_31 (myrom<2>_0_31)
+     LUT3:I1->O            1   0.551   0.000  Mmux_myrom_mux0000_774 (Mmux_myrom_mux0000_774)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_myrom_mux0000_6_f5_23 (Mmux_myrom_mux0000_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_myrom_mux0000_4_f6_23 (Mmux_myrom_mux0000_4_f624)
+     MUXF7:I0->O           2   0.342   1.072  Mmux_myrom_mux0000_2_f7_23 (myrom_mux0000<31>)
+     LUT3:I1->O            1   0.551   0.000  Mmux_output_824 (Mmux_output_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_output_6_f5_23 (Mmux_output_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_output_4_f6_23 (Mmux_output_4_f624)
+     MUXF7:I0->O           1   0.342   0.801  Mmux_output_2_f7_23 (output_31_OBUF)
+     OBUF:I->O                 5.644          output_31_OBUF (output<31>)
+    ----------------------------------------
+    Total                     12.336ns (9.467ns logic, 2.869ns route)
+                                       (76.7% logic, 23.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myrom<3>_0_cmp_eq0000'
+  Total number of paths / destination ports: 512 / 32
+-------------------------------------------------------------------------
+Offset:              12.209ns (Levels of Logic = 9)
+  Source:            myrom<3>_0_31 (LATCH)
+  Destination:       output<31> (PAD)
+  Source Clock:      myrom<3>_0_cmp_eq0000 falling
+
+  Data Path: myrom<3>_0_31 to output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.869  myrom<3>_0_31 (myrom<3>_0_31)
+     LUT3:I2->O            1   0.551   0.000  Mmux_myrom_mux0000_774 (Mmux_myrom_mux0000_774)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_myrom_mux0000_6_f5_23 (Mmux_myrom_mux0000_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_myrom_mux0000_4_f6_23 (Mmux_myrom_mux0000_4_f624)
+     MUXF7:I0->O           2   0.342   1.072  Mmux_myrom_mux0000_2_f7_23 (myrom_mux0000<31>)
+     LUT3:I1->O            1   0.551   0.000  Mmux_output_824 (Mmux_output_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_output_6_f5_23 (Mmux_output_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_output_4_f6_23 (Mmux_output_4_f624)
+     MUXF7:I0->O           1   0.342   0.801  Mmux_output_2_f7_23 (output_31_OBUF)
+     OBUF:I->O                 5.644          output_31_OBUF (output<31>)
+    ----------------------------------------
+    Total                     12.209ns (9.467ns logic, 2.742ns route)
+                                       (77.5% logic, 22.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myrom<4>_4_cmp_eq00011'
+  Total number of paths / destination ports: 512 / 32
+-------------------------------------------------------------------------
+Offset:              12.336ns (Levels of Logic = 9)
+  Source:            myrom<4>_0_31 (LATCH)
+  Destination:       output<31> (PAD)
+  Source Clock:      myrom<4>_4_cmp_eq00011 falling
+
+  Data Path: myrom<4>_0_31 to output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.996  myrom<4>_0_31 (myrom<4>_0_31)
+     LUT3:I1->O            1   0.551   0.000  Mmux_myrom_mux0000_773 (Mmux_myrom_mux0000_773)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_myrom_mux0000_5_f5_48 (Mmux_myrom_mux0000_5_f549)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_myrom_mux0000_4_f6_23 (Mmux_myrom_mux0000_4_f624)
+     MUXF7:I0->O           2   0.342   1.072  Mmux_myrom_mux0000_2_f7_23 (myrom_mux0000<31>)
+     LUT3:I1->O            1   0.551   0.000  Mmux_output_824 (Mmux_output_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_output_6_f5_23 (Mmux_output_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_output_4_f6_23 (Mmux_output_4_f624)
+     MUXF7:I0->O           1   0.342   0.801  Mmux_output_2_f7_23 (output_31_OBUF)
+     OBUF:I->O                 5.644          output_31_OBUF (output<31>)
+    ----------------------------------------
+    Total                     12.336ns (9.467ns logic, 2.869ns route)
+                                       (76.7% logic, 23.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myrom<5>_0_cmp_eq00001'
+  Total number of paths / destination ports: 512 / 32
+-------------------------------------------------------------------------
+Offset:              12.209ns (Levels of Logic = 9)
+  Source:            myrom<5>_0_31 (LATCH)
+  Destination:       output<31> (PAD)
+  Source Clock:      myrom<5>_0_cmp_eq00001 falling
+
+  Data Path: myrom<5>_0_31 to output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.869  myrom<5>_0_31 (myrom<5>_0_31)
+     LUT3:I2->O            1   0.551   0.000  Mmux_myrom_mux0000_773 (Mmux_myrom_mux0000_773)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_myrom_mux0000_5_f5_48 (Mmux_myrom_mux0000_5_f549)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_myrom_mux0000_4_f6_23 (Mmux_myrom_mux0000_4_f624)
+     MUXF7:I0->O           2   0.342   1.072  Mmux_myrom_mux0000_2_f7_23 (myrom_mux0000<31>)
+     LUT3:I1->O            1   0.551   0.000  Mmux_output_824 (Mmux_output_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_output_6_f5_23 (Mmux_output_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_output_4_f6_23 (Mmux_output_4_f624)
+     MUXF7:I0->O           1   0.342   0.801  Mmux_output_2_f7_23 (output_31_OBUF)
+     OBUF:I->O                 5.644          output_31_OBUF (output<31>)
+    ----------------------------------------
+    Total                     12.209ns (9.467ns logic, 2.742ns route)
+                                       (77.5% logic, 22.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myrom<6>_0_cmp_eq00001'
+  Total number of paths / destination ports: 512 / 32
+-------------------------------------------------------------------------
+Offset:              12.336ns (Levels of Logic = 9)
+  Source:            myrom<6>_0_31 (LATCH)
+  Destination:       output<31> (PAD)
+  Source Clock:      myrom<6>_0_cmp_eq00001 falling
+
+  Data Path: myrom<6>_0_31 to output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.996  myrom<6>_0_31 (myrom<6>_0_31)
+     LUT3:I1->O            1   0.551   0.000  Mmux_myrom_mux0000_674 (Mmux_myrom_mux0000_674)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_myrom_mux0000_5_f5_48 (Mmux_myrom_mux0000_5_f549)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_myrom_mux0000_4_f6_23 (Mmux_myrom_mux0000_4_f624)
+     MUXF7:I0->O           2   0.342   1.072  Mmux_myrom_mux0000_2_f7_23 (myrom_mux0000<31>)
+     LUT3:I1->O            1   0.551   0.000  Mmux_output_824 (Mmux_output_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_output_6_f5_23 (Mmux_output_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_output_4_f6_23 (Mmux_output_4_f624)
+     MUXF7:I0->O           1   0.342   0.801  Mmux_output_2_f7_23 (output_31_OBUF)
+     OBUF:I->O                 5.644          output_31_OBUF (output<31>)
+    ----------------------------------------
+    Total                     12.336ns (9.467ns logic, 2.869ns route)
+                                       (76.7% logic, 23.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myrom<7>_0_cmp_eq00001'
+  Total number of paths / destination ports: 512 / 32
+-------------------------------------------------------------------------
+Offset:              12.209ns (Levels of Logic = 9)
+  Source:            myrom<7>_0_31 (LATCH)
+  Destination:       output<31> (PAD)
+  Source Clock:      myrom<7>_0_cmp_eq00001 falling
+
+  Data Path: myrom<7>_0_31 to output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.869  myrom<7>_0_31 (myrom<7>_0_31)
+     LUT3:I2->O            1   0.551   0.000  Mmux_myrom_mux0000_674 (Mmux_myrom_mux0000_674)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_myrom_mux0000_5_f5_48 (Mmux_myrom_mux0000_5_f549)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_myrom_mux0000_4_f6_23 (Mmux_myrom_mux0000_4_f624)
+     MUXF7:I0->O           2   0.342   1.072  Mmux_myrom_mux0000_2_f7_23 (myrom_mux0000<31>)
+     LUT3:I1->O            1   0.551   0.000  Mmux_output_824 (Mmux_output_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_output_6_f5_23 (Mmux_output_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_output_4_f6_23 (Mmux_output_4_f624)
+     MUXF7:I0->O           1   0.342   0.801  Mmux_output_2_f7_23 (output_31_OBUF)
+     OBUF:I->O                 5.644          output_31_OBUF (output<31>)
+    ----------------------------------------
+    Total                     12.209ns (9.467ns logic, 2.742ns route)
+                                       (77.5% logic, 22.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myrom<8>_0_cmp_eq00001'
+  Total number of paths / destination ports: 512 / 32
+-------------------------------------------------------------------------
+Offset:              12.336ns (Levels of Logic = 9)
+  Source:            myrom<8>_0_31 (LATCH)
+  Destination:       output<31> (PAD)
+  Source Clock:      myrom<8>_0_cmp_eq00001 falling
+
+  Data Path: myrom<8>_0_31 to output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.996  myrom<8>_0_31 (myrom<8>_0_31)
+     LUT3:I1->O            1   0.551   0.000  Mmux_myrom_mux0000_772 (Mmux_myrom_mux0000_772)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_myrom_mux0000_5_f5_47 (Mmux_myrom_mux0000_5_f548)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_myrom_mux0000_3_f6_23 (Mmux_myrom_mux0000_3_f624)
+     MUXF7:I1->O           2   0.342   1.072  Mmux_myrom_mux0000_2_f7_23 (myrom_mux0000<31>)
+     LUT3:I1->O            1   0.551   0.000  Mmux_output_824 (Mmux_output_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_output_6_f5_23 (Mmux_output_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_output_4_f6_23 (Mmux_output_4_f624)
+     MUXF7:I0->O           1   0.342   0.801  Mmux_output_2_f7_23 (output_31_OBUF)
+     OBUF:I->O                 5.644          output_31_OBUF (output<31>)
+    ----------------------------------------
+    Total                     12.336ns (9.467ns logic, 2.869ns route)
+                                       (76.7% logic, 23.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myrom<9>_2_cmp_eq00011'
+  Total number of paths / destination ports: 512 / 32
+-------------------------------------------------------------------------
+Offset:              12.209ns (Levels of Logic = 9)
+  Source:            myrom<9>_0_31 (LATCH)
+  Destination:       output<31> (PAD)
+  Source Clock:      myrom<9>_2_cmp_eq00011 falling
+
+  Data Path: myrom<9>_0_31 to output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.869  myrom<9>_0_31 (myrom<9>_0_31)
+     LUT3:I2->O            1   0.551   0.000  Mmux_myrom_mux0000_772 (Mmux_myrom_mux0000_772)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_myrom_mux0000_5_f5_47 (Mmux_myrom_mux0000_5_f548)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_myrom_mux0000_3_f6_23 (Mmux_myrom_mux0000_3_f624)
+     MUXF7:I1->O           2   0.342   1.072  Mmux_myrom_mux0000_2_f7_23 (myrom_mux0000<31>)
+     LUT3:I1->O            1   0.551   0.000  Mmux_output_824 (Mmux_output_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_output_6_f5_23 (Mmux_output_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_output_4_f6_23 (Mmux_output_4_f624)
+     MUXF7:I0->O           1   0.342   0.801  Mmux_output_2_f7_23 (output_31_OBUF)
+     OBUF:I->O                 5.644          output_31_OBUF (output<31>)
+    ----------------------------------------
+    Total                     12.209ns (9.467ns logic, 2.742ns route)
+                                       (77.5% logic, 22.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myrom<10>_0_cmp_eq0000'
+  Total number of paths / destination ports: 512 / 32
+-------------------------------------------------------------------------
+Offset:              12.336ns (Levels of Logic = 9)
+  Source:            myrom<10>_0_31 (LATCH)
+  Destination:       output<31> (PAD)
+  Source Clock:      myrom<10>_0_cmp_eq0000 falling
+
+  Data Path: myrom<10>_0_31 to output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.996  myrom<10>_0_31 (myrom<10>_0_31)
+     LUT3:I1->O            1   0.551   0.000  Mmux_myrom_mux0000_673 (Mmux_myrom_mux0000_673)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_myrom_mux0000_5_f5_47 (Mmux_myrom_mux0000_5_f548)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_myrom_mux0000_3_f6_23 (Mmux_myrom_mux0000_3_f624)
+     MUXF7:I1->O           2   0.342   1.072  Mmux_myrom_mux0000_2_f7_23 (myrom_mux0000<31>)
+     LUT3:I1->O            1   0.551   0.000  Mmux_output_824 (Mmux_output_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_output_6_f5_23 (Mmux_output_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_output_4_f6_23 (Mmux_output_4_f624)
+     MUXF7:I0->O           1   0.342   0.801  Mmux_output_2_f7_23 (output_31_OBUF)
+     OBUF:I->O                 5.644          output_31_OBUF (output<31>)
+    ----------------------------------------
+    Total                     12.336ns (9.467ns logic, 2.869ns route)
+                                       (76.7% logic, 23.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myrom<11>_0_cmp_eq0000'
+  Total number of paths / destination ports: 512 / 32
+-------------------------------------------------------------------------
+Offset:              12.209ns (Levels of Logic = 9)
+  Source:            myrom<11>_0_31 (LATCH)
+  Destination:       output<31> (PAD)
+  Source Clock:      myrom<11>_0_cmp_eq0000 falling
+
+  Data Path: myrom<11>_0_31 to output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.869  myrom<11>_0_31 (myrom<11>_0_31)
+     LUT3:I2->O            1   0.551   0.000  Mmux_myrom_mux0000_673 (Mmux_myrom_mux0000_673)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_myrom_mux0000_5_f5_47 (Mmux_myrom_mux0000_5_f548)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_myrom_mux0000_3_f6_23 (Mmux_myrom_mux0000_3_f624)
+     MUXF7:I1->O           2   0.342   1.072  Mmux_myrom_mux0000_2_f7_23 (myrom_mux0000<31>)
+     LUT3:I1->O            1   0.551   0.000  Mmux_output_824 (Mmux_output_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_output_6_f5_23 (Mmux_output_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_output_4_f6_23 (Mmux_output_4_f624)
+     MUXF7:I0->O           1   0.342   0.801  Mmux_output_2_f7_23 (output_31_OBUF)
+     OBUF:I->O                 5.644          output_31_OBUF (output<31>)
+    ----------------------------------------
+    Total                     12.209ns (9.467ns logic, 2.742ns route)
+                                       (77.5% logic, 22.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myrom<12>_10_cmp_eq0000'
+  Total number of paths / destination ports: 512 / 32
+-------------------------------------------------------------------------
+Offset:              12.336ns (Levels of Logic = 9)
+  Source:            myrom<12>_0_31 (LATCH)
+  Destination:       output<31> (PAD)
+  Source Clock:      myrom<12>_10_cmp_eq0000 falling
+
+  Data Path: myrom<12>_0_31 to output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.996  myrom<12>_0_31 (myrom<12>_0_31)
+     LUT3:I1->O            1   0.551   0.000  Mmux_myrom_mux0000_672 (Mmux_myrom_mux0000_672)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_myrom_mux0000_4_f5_23 (Mmux_myrom_mux0000_4_f524)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_myrom_mux0000_3_f6_23 (Mmux_myrom_mux0000_3_f624)
+     MUXF7:I1->O           2   0.342   1.072  Mmux_myrom_mux0000_2_f7_23 (myrom_mux0000<31>)
+     LUT3:I1->O            1   0.551   0.000  Mmux_output_824 (Mmux_output_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_output_6_f5_23 (Mmux_output_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_output_4_f6_23 (Mmux_output_4_f624)
+     MUXF7:I0->O           1   0.342   0.801  Mmux_output_2_f7_23 (output_31_OBUF)
+     OBUF:I->O                 5.644          output_31_OBUF (output<31>)
+    ----------------------------------------
+    Total                     12.336ns (9.467ns logic, 2.869ns route)
+                                       (76.7% logic, 23.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myrom<13>_0_cmp_eq0000'
+  Total number of paths / destination ports: 512 / 32
+-------------------------------------------------------------------------
+Offset:              12.209ns (Levels of Logic = 9)
+  Source:            myrom<13>_0_31 (LATCH)
+  Destination:       output<31> (PAD)
+  Source Clock:      myrom<13>_0_cmp_eq0000 falling
+
+  Data Path: myrom<13>_0_31 to output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.869  myrom<13>_0_31 (myrom<13>_0_31)
+     LUT3:I2->O            1   0.551   0.000  Mmux_myrom_mux0000_672 (Mmux_myrom_mux0000_672)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_myrom_mux0000_4_f5_23 (Mmux_myrom_mux0000_4_f524)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_myrom_mux0000_3_f6_23 (Mmux_myrom_mux0000_3_f624)
+     MUXF7:I1->O           2   0.342   1.072  Mmux_myrom_mux0000_2_f7_23 (myrom_mux0000<31>)
+     LUT3:I1->O            1   0.551   0.000  Mmux_output_824 (Mmux_output_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_output_6_f5_23 (Mmux_output_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_output_4_f6_23 (Mmux_output_4_f624)
+     MUXF7:I0->O           1   0.342   0.801  Mmux_output_2_f7_23 (output_31_OBUF)
+     OBUF:I->O                 5.644          output_31_OBUF (output<31>)
+    ----------------------------------------
+    Total                     12.209ns (9.467ns logic, 2.742ns route)
+                                       (77.5% logic, 22.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myrom<14>_5_cmp_eq00011'
+  Total number of paths / destination ports: 512 / 32
+-------------------------------------------------------------------------
+Offset:              12.336ns (Levels of Logic = 9)
+  Source:            myrom<14>_0_31 (LATCH)
+  Destination:       output<31> (PAD)
+  Source Clock:      myrom<14>_5_cmp_eq00011 falling
+
+  Data Path: myrom<14>_0_31 to output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.996  myrom<14>_0_31 (myrom<14>_0_31)
+     LUT3:I1->O            1   0.551   0.000  Mmux_myrom_mux0000_524 (Mmux_myrom_mux0000_524)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_myrom_mux0000_4_f5_23 (Mmux_myrom_mux0000_4_f524)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_myrom_mux0000_3_f6_23 (Mmux_myrom_mux0000_3_f624)
+     MUXF7:I1->O           2   0.342   1.072  Mmux_myrom_mux0000_2_f7_23 (myrom_mux0000<31>)
+     LUT3:I1->O            1   0.551   0.000  Mmux_output_824 (Mmux_output_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_output_6_f5_23 (Mmux_output_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_output_4_f6_23 (Mmux_output_4_f624)
+     MUXF7:I0->O           1   0.342   0.801  Mmux_output_2_f7_23 (output_31_OBUF)
+     OBUF:I->O                 5.644          output_31_OBUF (output<31>)
+    ----------------------------------------
+    Total                     12.336ns (9.467ns logic, 2.869ns route)
+                                       (76.7% logic, 23.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myrom<15>_0_cmp_eq0000'
+  Total number of paths / destination ports: 512 / 32
+-------------------------------------------------------------------------
+Offset:              12.209ns (Levels of Logic = 9)
+  Source:            myrom<15>_0_31 (LATCH)
+  Destination:       output<31> (PAD)
+  Source Clock:      myrom<15>_0_cmp_eq0000 falling
+
+  Data Path: myrom<15>_0_31 to output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.633   0.869  myrom<15>_0_31 (myrom<15>_0_31)
+     LUT3:I2->O            1   0.551   0.000  Mmux_myrom_mux0000_524 (Mmux_myrom_mux0000_524)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_myrom_mux0000_4_f5_23 (Mmux_myrom_mux0000_4_f524)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_myrom_mux0000_3_f6_23 (Mmux_myrom_mux0000_3_f624)
+     MUXF7:I1->O           2   0.342   1.072  Mmux_myrom_mux0000_2_f7_23 (myrom_mux0000<31>)
+     LUT3:I1->O            1   0.551   0.000  Mmux_output_824 (Mmux_output_824)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_output_6_f5_23 (Mmux_output_6_f524)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_output_4_f6_23 (Mmux_output_4_f624)
+     MUXF7:I0->O           1   0.342   0.801  Mmux_output_2_f7_23 (output_31_OBUF)
+     OBUF:I->O                 5.644          output_31_OBUF (output<31>)
+    ----------------------------------------
+    Total                     12.209ns (9.467ns logic, 2.742ns route)
+                                       (77.5% logic, 22.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8160 / 32
+-------------------------------------------------------------------------
+Delay:               16.401ns (Levels of Logic = 10)
+  Source:            address<4> (PAD)
+  Destination:       output<31> (PAD)
+
+  Data Path: address<4> to output<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          4112   0.821   4.873  address_4_IBUF (address_4_IBUF)
+     LUT3:I0->O            1   0.551   0.000  Mmux_myrom_mux0000_5 (Mmux_myrom_mux0000_5)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_myrom_mux0000_4_f5 (Mmux_myrom_mux0000_4_f5)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_myrom_mux0000_3_f6 (Mmux_myrom_mux0000_3_f6)
+     MUXF7:I1->O           2   0.342   1.072  Mmux_myrom_mux0000_2_f7 (myrom_mux0000<0>)
+     LUT3:I1->O            1   0.551   0.000  Mmux_output_8 (Mmux_output_8)
+     MUXF5:I0->O           1   0.360   0.000  Mmux_output_6_f5 (Mmux_output_6_f5)
+     MUXF6:I0->O           1   0.342   0.000  Mmux_output_4_f6 (Mmux_output_4_f6)
+     MUXF7:I0->O           1   0.342   0.801  Mmux_output_2_f7 (output_0_OBUF)
+     OBUF:I->O                 5.644          output_0_OBUF (output<0>)
+    ----------------------------------------
+    Total                     16.401ns (9.655ns logic, 6.746ns route)
+                                       (58.9% logic, 41.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 271.00 secs
+Total CPU time to Xst completion: 270.22 secs
+ 
+--> 
+
+Total memory usage is 709180 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  259 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

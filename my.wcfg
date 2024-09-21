@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/jerem/OneDrive/Desktop/projects/blowfish/c_unit_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="c_unit" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="31" />
+   <wvobject fp_name="/c_unit/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/key_reg_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">key_reg_en</obj_property>
+      <obj_property name="ObjectShortName">key_reg_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/key_mux_sel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">key_mux_sel</obj_property>
+      <obj_property name="ObjectShortName">key_mux_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/box_input_mux_sel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">box_input_mux_sel</obj_property>
+      <obj_property name="ObjectShortName">box_input_mux_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/s_box_addr_sel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_box_addr_sel</obj_property>
+      <obj_property name="ObjectShortName">s_box_addr_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/p_we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">p_we</obj_property>
+      <obj_property name="ObjectShortName">p_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/s1_we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s1_we</obj_property>
+      <obj_property name="ObjectShortName">s1_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/s2_we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s2_we</obj_property>
+      <obj_property name="ObjectShortName">s2_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/s3_we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s3_we</obj_property>
+      <obj_property name="ObjectShortName">s3_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/count" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">count[7:0]</obj_property>
+      <obj_property name="ObjectShortName">count[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/prev" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">prev</obj_property>
+      <obj_property name="ObjectShortName">prev</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/s4_we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s4_we</obj_property>
+      <obj_property name="ObjectShortName">s4_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/initialize" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">initialize</obj_property>
+      <obj_property name="ObjectShortName">initialize</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/encrypt" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">encrypt</obj_property>
+      <obj_property name="ObjectShortName">encrypt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/s_key_reg_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_key_reg_en</obj_property>
+      <obj_property name="ObjectShortName">s_key_reg_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/s_key_mux_sel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_key_mux_sel</obj_property>
+      <obj_property name="ObjectShortName">s_key_mux_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/s_s_box_addr_sel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_s_box_addr_sel</obj_property>
+      <obj_property name="ObjectShortName">s_s_box_addr_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/s_p_we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_p_we</obj_property>
+      <obj_property name="ObjectShortName">s_p_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/s_s1_we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_s1_we</obj_property>
+      <obj_property name="ObjectShortName">s_s1_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/s_s2_we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_s2_we</obj_property>
+      <obj_property name="ObjectShortName">s_s2_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/s_s3_we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_s3_we</obj_property>
+      <obj_property name="ObjectShortName">s_s3_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/s_s4_we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_s4_we</obj_property>
+      <obj_property name="ObjectShortName">s_s4_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/s_p_addr_sel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_p_addr_sel</obj_property>
+      <obj_property name="ObjectShortName">s_p_addr_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/s_box_input_mux_sel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_box_input_mux_sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_box_input_mux_sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/subkey_gen_count" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">subkey_gen_count</obj_property>
+      <obj_property name="ObjectShortName">subkey_gen_count</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/subkey_gen_next" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">subkey_gen_next</obj_property>
+      <obj_property name="ObjectShortName">subkey_gen_next</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/encrypt_count" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">encrypt_count</obj_property>
+      <obj_property name="ObjectShortName">encrypt_count</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/mux_count" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">mux_count</obj_property>
+      <obj_property name="ObjectShortName">mux_count</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/round_count" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">round_count</obj_property>
+      <obj_property name="ObjectShortName">round_count</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/count2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">count2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">count2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/c_unit/start_exp" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start_exp</obj_property>
+      <obj_property name="ObjectShortName">start_exp</obj_property>
+   </wvobject>
+</wave_config>

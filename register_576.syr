@@ -1,0 +1,370 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: register_576.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "register_576.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "register_576"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : register_576
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/register_576.vhd" in Library work.
+Entity <register_576> compiled.
+Entity <register_576> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <register_576> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <register_576> in library <work> (Architecture <behavioral>).
+Entity <register_576> analyzed. Unit <register_576> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <register_576>.
+    Related source file is "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/register_576.vhd".
+WARNING:Xst:647 - Input <ADDR<8:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit 18-to-1 multiplexer for signal <DO>.
+    Found 576-bit register for signal <my_actual_parray>.
+INFO:Xst:738 - HDL ADVISOR - 576 flip-flops were inferred for signal <my_actual_parray>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred  32 Multiplexer(s).
+Unit <register_576> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 18
+ 32-bit register                                       : 18
+# Multiplexers                                         : 1
+ 32-bit 18-to-1 multiplexer                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 576
+ Flip-Flops                                            : 576
+# Multiplexers                                         : 1
+ 32-bit 18-to-1 multiplexer                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <register_576> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block register_576, actual ratio is 23.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 576
+ Flip-Flops                                            : 576
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : register_576.ngr
+Top Level Output File Name         : register_576
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 76
+
+Cell Usage :
+# BELS                             : 597
+#      LUT3                        : 260
+#      LUT4                        : 81
+#      MUXF5                       : 160
+#      MUXF6                       : 64
+#      MUXF7                       : 32
+# FlipFlops/Latches                : 576
+#      FDCE                        : 309
+#      FDPE                        : 267
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 71
+#      IBUF                        : 39
+#      OBUF                        : 32
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                      491  out of   1920    25%  
+ Number of Slice Flip Flops:            576  out of   3840    15%  
+ Number of 4 input LUTs:                341  out of   3840     8%  
+ Number of IOs:                          76
+ Number of bonded IOBs:                  72  out of    173    41%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 576   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+SSR                                | IBUF                   | 576   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 8.878ns
+   Maximum output required time after clock: 11.570ns
+   Maximum combinational path delay: 14.167ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 4032 / 1152
+-------------------------------------------------------------------------
+Offset:              8.878ns (Levels of Logic = 3)
+  Source:            ADDR<1> (PAD)
+  Destination:       my_actual_parray_15_31 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: ADDR<1> to my_actual_parray_15_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           259   0.821   3.221  ADDR_1_IBUF (ADDR_1_IBUF)
+     LUT3:I2->O            8   0.551   1.278  my_actual_parray_10_not000111 (N01)
+     LUT4:I1->O           32   0.551   1.853  my_actual_parray_7_not00011 (my_actual_parray_7_not0001)
+     FDPE:CE                   0.602          my_actual_parray_7_0
+    ----------------------------------------
+    Total                      8.878ns (2.525ns logic, 6.353ns route)
+                                       (28.4% logic, 71.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 1120 / 32
+-------------------------------------------------------------------------
+Offset:              11.570ns (Levels of Logic = 7)
+  Source:            my_actual_parray_0_31 (FF)
+  Destination:       DO<31> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: my_actual_parray_0_31 to DO<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.720   0.996  my_actual_parray_0_31 (my_actual_parray_0_31)
+     LUT3:I1->O            1   0.551   0.000  ADDR<4>_1123 (ADDR<4>_1123)
+     MUXF5:I0->O           1   0.360   0.000  ADDR<4>_9_f5_22 (ADDR<4>_9_f523)
+     MUXF6:I0->O           1   0.342   0.000  ADDR<4>_7_f6_22 (ADDR<4>_7_f623)
+     MUXF7:I0->O           2   0.342   0.903  ADDR<4>_5_f7_22 (ADDR<4>_5_f723)
+     LUT4:I3->O            1   0.551   0.000  ADDR<4>241 (ADDR<4>24)
+     MUXF5:I1->O           1   0.360   0.801  ADDR<4>24_f5 (DO_31_OBUF)
+     OBUF:I->O                 5.644          DO_31_OBUF (DO<31>)
+    ----------------------------------------
+    Total                     11.570ns (8.870ns logic, 2.700ns route)
+                                       (76.7% logic, 23.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1088 / 32
+-------------------------------------------------------------------------
+Delay:               14.167ns (Levels of Logic = 8)
+  Source:            ADDR<1> (PAD)
+  Destination:       DO<31> (PAD)
+
+  Data Path: ADDR<1> to DO<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           259   0.821   3.492  ADDR_1_IBUF (ADDR_1_IBUF)
+     LUT3:I0->O            1   0.551   0.000  Mmux_DO_8 (Mmux_DO_8)
+     MUXF5:I1->O           1   0.360   0.000  Mmux_DO_7_f5 (Mmux_DO_7_f5)
+     MUXF6:I1->O           1   0.342   0.000  Mmux_DO_6_f6 (Mmux_DO_6_f6)
+     MUXF7:I1->O           2   0.342   0.903  Mmux_DO_5_f7 (Mmux_DO_5_f7)
+     LUT4:I3->O            1   0.551   0.000  ADDR<4>341 (ADDR<4>34)
+     MUXF5:I1->O           1   0.360   0.801  ADDR<4>34_f5 (DO_0_OBUF)
+     OBUF:I->O                 5.644          DO_0_OBUF (DO<0>)
+    ----------------------------------------
+    Total                     14.167ns (8.971ns logic, 5.196ns route)
+                                       (63.3% logic, 36.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.35 secs
+ 
+--> 
+
+Total memory usage is 239224 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

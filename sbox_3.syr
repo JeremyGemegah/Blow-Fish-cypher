@@ -1,0 +1,500 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: sbox_3.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "sbox_3.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "sbox_3"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : sbox_3
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/rough_work.vhd" in Library work.
+Architecture behavioral of Entity rough_work is up to date.
+Compiling vhdl file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/sbox_3.vhd" in Library work.
+Entity <sbox_3> compiled.
+Entity <sbox_3> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <sbox_3> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <rough_work> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <sbox_3> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/sbox_3.vhd" line 100: Unconnected output port 'DOP' of component 'rough_work'.
+INFO:Xst:1432 - Contents of array <myrom> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <myrom> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:819 - "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/sbox_3.vhd" line 114: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <myrom>
+Entity <sbox_3> analyzed. Unit <sbox_3> generated.
+
+Analyzing Entity <rough_work> in library <work> (Architecture <behavioral>).
+    Set user-defined property "INIT =  000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INITP_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_00 =  99BC9BBED38227404FA337425CB0679E5AC52D1BABC27737D3FAF5CF3A39CE37" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_01 =  6A366EB4B26EB1BE21A19045B78C1B6BC700C47BD62D1C7EBF0F7315D5118E9D" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_02 =  4CD04DC6D5730A1D468DDE7D530FF8EE6549C2C8C6A376D2BC946E795748AB2F" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_03 =  9A86EE2263EF8CE26A2D519AA1FAD5F0BE5EE304AC9526E8A9BA46502939BBDB" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_04 =  BA645BD68FE515509BE96A4D83C061BA9CF2D0A4A51E03AA43242EF6C089C2B8" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_05 =  77FA0A593F046F69F752F7DAC72FEFD3EF5562E94BA99586A73A3AE12826A2F9" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_06 =  022B8B512CF0B7D99E34D797E990FD5A3B3EE5939B09E6AD87B0860180E4A915" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_07 =  5A88F54C5AD6B472ADF2B89B1F9F25CF7C7D2D28D1CF3ED6017DA67D96D5AC3A" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_08 =  79132E28F8D56629283B57CCE8D3C48DED93FA9B47B0ACFDE019A5E6E029AC71" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_09 =  0564F0BD03A1612588F46DBA15056DD4E3D35E8CF7960E44ED756055785F0191" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_0A =  26DCF319F59C66FB1E6321F51B3F6D9BA93A072A97271AEC3C9057A2C3EB9E15" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_0B =  CCAD925FABCC5167C20AD9F8285177118ABA3CBB03563482B155FDF57533D928" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_0C =  774FBE325121CE64FB3E7BCEEA7A90C29320F991379D58623830DC8E4DE81751" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_0D =  0907216669852DFDDD6DB224A2AE08106413E68048DE5369C3293D46A8B6E37E" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_0E =  6BB4E3BBCCD2017F1B588D405BBEF7DD1C20C8AE586CDECF6445C0DDB39A460A" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_0F =  BF3C6F478D6612AEFA6484BB72EACEA8BCB4CDD53E350A443A59FF45DDA26A7E" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_10 =  AF537D5DF8721671E75B1357740E0D8DF64E6370AEC2771B542F5D9ED29BE463" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_11 =  CE6EA04806B89FB495983A1DE1B004280115AF8434D2466A4EB4E2CC4040CB08" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_12 =  344525BDBB3A792BE7933FDC611560B1277227F8011A1D4B3520AB826F3F3B82" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_13 =  A1E8AAC7CF0111C3BCC7D1F6E01CC87EA01FBAC92F32C9B751CE794BA08839E1" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_14 =  E0B12B4F8DF9317CC69136670339C32AD50ADA38D0DADECBD44FBD9A1A908749" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_15 =  9B9415250F91FC7115E6FC2ABF97222C27D9459CF2D519FF43F5BB3AF79E59B7" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_16 =  CB03A44210D25065E3056A0CB6C1075E12BAA8D1C2A86459CEB69CEBFAE59361" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_17 =  8971F21ED3A0342BE0D392DF9F1F95323278E9644C98A0BE1698DB3BE0EC6E0E" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_18 =  0FE3F11DE60B6F479B992F2EDF359F8DC37632D8C5BE71204BA3348C1B0A7441" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_19 =  F6FB2299848FD2C5FD2C1D051618B166CD3E7E6FCE6279CF1EDAD891E54CDA54" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_1A =  88D273CC6E1636975A75EBB5ACF0816256CCCD0293A83531A6327623F523F357" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_1B =  C3F27B9A45E1D006327A140AE6C6C7BD71C656144C50901B81B949D0DE966292" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_1C =  CD769C2BB6CBCF7CB20402227112690535BDD2F6BB25BFE262A80F00C9AA53FD" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_1D =  2075606077AFA1C5F746CE76BA38209C2547ADF038ABBD601640E3D353113EC0" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_1E =  D6EBE1F901C36AE402FB8A8C1948C25C4CF9AA7E7AAAF9B08AE88DD885CBFE4E" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_1F =  3AC372E6578FDFE3CE77E25BB74E6132C208E69F3F09252DA65CDEA090D4F869" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "INIT_3F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "SRVAL =  000000000" for instance <RAMB16_S36_inst> in unit <rough_work>.
+    Set user-defined property "WRITE_MODE =  WRITE_FIRST" for instance <RAMB16_S36_inst> in unit <rough_work>.
+Entity <rough_work> analyzed. Unit <rough_work> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <rough_work>.
+    Related source file is "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/rough_work.vhd".
+Unit <rough_work> synthesized.
+
+
+Synthesizing Unit <sbox_3>.
+    Related source file is "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/sbox_3.vhd".
+WARNING:Xst:647 - Input <en> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1306 - Output <output> is never assigned.
+WARNING:Xst:647 - Input <input> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1781 - Signal <myrom> is used but never assigned. Tied to default value.
+WARNING:Xst:646 - Signal <check_status> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <address<31:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 32-bit register for signal <address>.
+    Found 32-bit adder for signal <address$add0000> created at line 130.
+    Found 32-bit up counter for signal <inter>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <sbox_3> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 1
+ 32-bit register                                       : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <address_9> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_10> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_11> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_12> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_13> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_14> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_15> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_16> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_17> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_18> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_19> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_20> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_21> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_22> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_23> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_24> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_25> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_26> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_27> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_28> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_29> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_30> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_31> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_9> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_10> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_11> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_12> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_13> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_14> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_15> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_16> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_17> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_18> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_19> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_20> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_21> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_22> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_23> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_24> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_25> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_26> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_27> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_28> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_29> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_30> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <address_31> of sequential type is unconnected in block <sbox_3>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 9
+ Flip-Flops                                            : 9
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <inter_9> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_10> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_11> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_12> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_13> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_14> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_15> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_16> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_17> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_18> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_19> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_20> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_21> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_22> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_23> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_24> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_25> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_26> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_27> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_28> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_29> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_30> of sequential type is unconnected in block <sbox_3>.
+WARNING:Xst:2677 - Node <inter_31> of sequential type is unconnected in block <sbox_3>.
+INFO:Xst:1901 - Instance myram/RAMB16_S36_inst in unit myram/RAMB16_S36_inst of type RAMB16_S36 has been replaced by RAMB16
+
+Optimizing unit <sbox_3> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block sbox_3, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 18
+ Flip-Flops                                            : 18
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : sbox_3.ngr
+Top Level Output File Name         : sbox_3
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 66
+
+Cell Usage :
+# BELS                             : 56
+#      GND                         : 2
+#      INV                         : 3
+#      LUT1                        : 16
+#      MUXCY                       : 16
+#      VCC                         : 1
+#      XORCY                       : 18
+# FlipFlops/Latches                : 18
+#      FD                          : 9
+#      FD_1                        : 9
+# RAMS                             : 1
+#      RAMB16                      : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                       10  out of   1920     0%  
+ Number of Slice Flip Flops:             18  out of   3840     0%  
+ Number of 4 input LUTs:                 19  out of   3840     0%  
+ Number of IOs:                          66
+ Number of bonded IOBs:                   1  out of    173     0%  
+ Number of BRAMs:                         1  out of     12     8%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 19    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 4.478ns (Maximum Frequency: 223.314MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.478ns (frequency: 223.314MHz)
+  Total number of paths / destination ports: 99 / 27
+-------------------------------------------------------------------------
+Delay:               4.478ns (Levels of Logic = 9)
+  Source:            inter_1 (FF)
+  Destination:       address_8 (FF)
+  Source Clock:      clk falling
+  Destination Clock: clk falling
+
+  Data Path: inter_1 to address_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.720   1.216  inter_1 (inter_1)
+     LUT1:I0->O            1   0.551   0.000  Mcount_inter_cy<1>_rt (Mcount_inter_cy<1>_rt)
+     MUXCY:S->O            1   0.500   0.000  Mcount_inter_cy<1> (Mcount_inter_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_inter_cy<2> (Mcount_inter_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_inter_cy<3> (Mcount_inter_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_inter_cy<4> (Mcount_inter_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_inter_cy<5> (Mcount_inter_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Mcount_inter_cy<6> (Mcount_inter_cy<6>)
+     MUXCY:CI->O           0   0.064   0.000  Mcount_inter_cy<7> (Mcount_inter_cy<7>)
+     XORCY:CI->O           1   0.904   0.000  Mcount_inter_xor<8> (Result<8>)
+     FD:D                      0.203          inter_8
+    ----------------------------------------
+    Total                      4.478ns (3.262ns logic, 1.216ns route)
+                                       (72.8% logic, 27.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.63 secs
+ 
+--> 
+
+Total memory usage is 249148 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   77 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

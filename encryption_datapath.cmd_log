@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/encryption_datapath.xst" -ofn "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/encryption_datapath.syr" 
+xst -intstyle ise -ifn "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/encryption_datapath.xst" -ofn "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/encryption_datapath.syr" 
+xst -intstyle ise -ifn "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/encryption_datapath.xst" -ofn "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/encryption_datapath.syr" 
+xst -intstyle ise -ifn "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/encryption_datapath.xst" -ofn "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/encryption_datapath.syr" 

@@ -1,0 +1,6 @@
+vhdl work "register_576.vhd"
+vhdl work "new_sbox4.vhd"
+vhdl work "new_sbox3.vhd"
+vhdl work "new_sbox2.vhd"
+vhdl work "new_sbox1.vhd"
+vhdl work "database.vhd"

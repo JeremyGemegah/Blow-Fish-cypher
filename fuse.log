@@ -1,0 +1,70 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/jerem/OneDrive/Desktop/projects/blowfish/top_model_isim_beh.exe -prj C:/Users/jerem/OneDrive/Desktop/projects/blowfish/top_model_beh.prj work.top_model 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/register_32.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/f_function.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/buffer.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/round.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/register_576.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/register_448.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/post_processing.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/new_sbox4.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/new_sbox3.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/new_sbox2.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/new_sbox1.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/key_mux.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/key_evaluator.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/combinational_shifter.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/key_expansion.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/encryption_datapath.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/database.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/datapath1.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/c_unit.vhd" into library work
+Parsing VHDL file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/top_model.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 177020 KB
+Fuse CPU Usage: 780 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling architecture behavioral of entity key_evaluator [key_evaluator_default]
+Compiling architecture behavioral of entity key_mux [key_mux_default]
+Compiling architecture behavioral of entity register_448 [register_448_default]
+Compiling architecture behavioral of entity combinational_shifter [combinational_shifter_default]
+Compiling architecture behavioral of entity key_expansion [key_expansion_default]
+Compiling architecture behavioral of entity register_32 [register_32_default]
+Compiling architecture behavioral of entity f_function [f_function_default]
+Compiling architecture behavioral of entity round [round_default]
+Compiling architecture behavioral of entity tri_state_buffer [tri_state_buffer_default]
+Compiling architecture behavioral of entity post_processing [post_processing_default]
+Compiling architecture behavioral of entity encryption_datapath [encryption_datapath_default]
+Compiling package vcomponents
+Compiling package textio
+Compiling package std_logic_textio
+Compiling architecture behavioral of entity register_576 [register_576_default]
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling package vpkg
+Compiling architecture ramb16_s36_v of entity RAMB16_S36 [\RAMB16_S36("0000000000000000000...]
+Compiling architecture behavioral of entity new_sbox1 [new_sbox1_default]
+Compiling architecture ramb16_s36_v of entity RAMB16_S36 [\RAMB16_S36("0000000000000000000...]
+Compiling architecture behavioral of entity new_sbox2 [new_sbox2_default]
+Compiling architecture ramb16_s36_v of entity RAMB16_S36 [\RAMB16_S36("0000000000000000000...]
+Compiling architecture behavioral of entity new_sbox3 [new_sbox3_default]
+Compiling architecture ramb16_s36_v of entity RAMB16_S36 [\RAMB16_S36("0000000000000000000...]
+Compiling architecture behavioral of entity new_sbox4 [new_sbox4_default]
+Compiling architecture behavioral of entity database [database_default]
+Compiling architecture behavioral of entity datapath1 [datapath1_default]
+Compiling architecture behavioral of entity c_unit [c_unit_default]
+Compiling architecture behavioral of entity top_model
+Time Resolution for simulation is 1ps.
+Waiting for 5 sub-compilation(s) to finish...
+Compiled 58 VHDL Units
+Built simulation executable C:/Users/jerem/OneDrive/Desktop/projects/blowfish/top_model_isim_beh.exe
+Fuse Memory Usage: 217184 KB
+Fuse CPU Usage: 1687 ms

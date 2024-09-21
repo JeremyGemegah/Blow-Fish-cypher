@@ -1,0 +1,367 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: new_sbox1.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "new_sbox1.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "new_sbox1"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : new_sbox1
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/new_sbox1.vhd" in Library work.
+Entity <new_sbox1> compiled.
+Entity <new_sbox1> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <new_sbox1> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <new_sbox1> in library <work> (Architecture <behavioral>).
+    Set user-defined property "INIT =  000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INITP_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_00 =  F12C7F99BA7C90456A267E96B8E1AFEDD01ADFB72FFD72DB98DFB5ACD1310BA6" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_01 =  F4933D7EA458FEA371574E69636920D8858EFC160801F2E2B3916CF724A19947" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_02 =  2AF260139C30D539C25A59B57B54A41D82154AEE718BCD58728EB6580D95748F" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_03 =  B01E8A3E6C9E0E8B603A180E8E79DCB0B8DB38EFCA417918286085F0C5D1B023" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_04 =  63E8144057489862AA55AB94E65525F355605C6078AF2FDABD314B27D71577C1" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_05 =  636FBC2AB3EE14117C72E993A15486AF1141E8CEB4CC5C342AAB10B655CA396A" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_06 =  289586777A3253816C24CF5CAFD6BA339B87931ECE5C3E16741831F62BA9C55D" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_07 =  5DEC8032487CAC60FB21A99161D809CC66282193C4BFE81B6B4BB9AF3B8F4898" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_08 =  83F442390F6D6FF3D396ACC523893E81EB651B88DC262302E98575B1EF845D5D" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_09 =  ABD388F0670C9C61F6E96C9A21C668429E1F9B5E69C8F04AA48420042E0B4482" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_0A =  7EFB2A98BA3BF050137A3BE46EEF0B6CAB5133A3960FA728D8542F686A51A0D2" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_0B =  3B8B5EBE7D84A5C3456F9FB48CEE861982430E8866CA593E39AF0176A1F1651D" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_0C =  429B023D1BFEDF72363F77064ED3AA6256C16AA6401A449F85C12073E06F75D8" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_0D =  F6E8DEF725D479D880991B7B075372C949F1C09BDB0FEAD3D00A124837D0D724" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_0E =  196A24635E5C9EC2409F60C4C1A94FB604C006BA976CE0BDB6794C3BE3FE501A" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_0F =  AF5EBD09CC8145449B30952C6DFC511F3B52EC6F1339B2EB3E6C53B568FB6FAF" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_10 =  B9D3FBDBD20B5F3945C8740FC0CBA857192E4BB3660F2807DE334AFDBEE3D004" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_11 =  DB3222F88EA5E9F8FB1FA3CC679F25FE402C7279D6A100C61A60320A5579C0BD" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_12 =  3E00DF8253317B48FD238760323DB5FAAD0552AB2F501EC8FD616B153C7516DF" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_13 =  8C4F5573AC6732C6287EFFC3D542A8F6DF1769DB1A87562ECA6F8CA09E5C57BB" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_14 =  2DD1D35B4AFCB56CFD2183B810FA3D98B8F011A0E1FFA35DBBCA58C8695B27B0" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_15 =  CEE4C6E862FB1341A4CB7E33E1DDF2DA4BFB9790D28E49BCB6F845659A53E479" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_16 =  6B93D5A0EAAD8E71AE90919895DBDA4D2BF11FB4D07E9EFE36774C01EF20CADA" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_17 =  900DF01C8888B812F2122B648FF6E2FB8E7594B78E3C5B2FAFC725E0D08ED1D0" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_18 =  8B021FA1EA752DFEBE0E17772F2F2218B3A8C1ADD1CFF191688FC31C4FAD5EA0" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_19 =  D2ADA8D97CC43B81FD13E0B7B4A84FE0CE89E29918ACF3D6B56F74E8E5A0CC0F" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_1A =  FB9D35CFC75442F577B5FA86E6AD2065211A147793CC731480957705165FA266" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_1B =  57B8E0AF226800BB2071B35E00250E2DAE1E7E49D6411BD37B3E89A0EBCDAF0C" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_1C =  02E5B9C5207D5BA2D95A537F78C1438959DFA6AA5563911DF009B91E2464369B" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_1D =  9A5329151B5100527B14A94AB3472DCA4E734A4111C819686295CFA983260376" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_1E =  2A0DD915F296EC6B571BE91F08BA6FB581E674002B60A476BC9BC6E4D60F573F" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_1F =  6E85076A08BA4799A99F8FA153B02D5DC5855664FF34052EE7B9F9B6B6636521" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_3E =  FFFFFFFF67890123000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "INIT_3F =  FFFFFFFF67890123000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "SRVAL =  000000000" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+    Set user-defined property "WRITE_MODE =  WRITE_FIRST" for instance <RAMB16_S36_inst> in unit <new_sbox1>.
+Entity <new_sbox1> analyzed. Unit <new_sbox1> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <new_sbox1>.
+    Related source file is "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/new_sbox1.vhd".
+Unit <new_sbox1> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:1901 - Instance RAMB16_S36_inst in unit RAMB16_S36_inst of type RAMB16_S36 has been replaced by RAMB16
+
+Optimizing unit <new_sbox1> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block new_sbox1, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : new_sbox1.ngr
+Top Level Output File Name         : new_sbox1
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 85
+
+Cell Usage :
+# BELS                             : 1
+#      GND                         : 1
+# RAMS                             : 1
+#      RAMB16                      : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 84
+#      IBUF                        : 48
+#      OBUF                        : 36
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                        0  out of   1920     0%  
+ Number of IOs:                          85
+ Number of bonded IOBs:                  85  out of    173    49%  
+ Number of BRAMs:                         1  out of     12     8%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 1     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 2.118ns
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 47 / 47
+-------------------------------------------------------------------------
+Offset:              2.118ns (Levels of Logic = 2)
+  Source:            SSR (PAD)
+  Destination:       RAMB16_S36_inst/RAMB16_S36_inst (RAM)
+  Destination Clock: CLK rising
+
+  Data Path: SSR to RAMB16_S36_inst/RAMB16_S36_inst
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.801  SSR_IBUF (SSR_IBUF)
+     begin scope: 'RAMB16_S36_inst'
+     RAMB16:SSRA               0.496          RAMB16_S36_inst
+    ----------------------------------------
+    Total                      2.118ns (1.317ns logic, 0.801ns route)
+                                       (62.2% logic, 37.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.87 secs
+ 
+--> 
+
+Total memory usage is 237180 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,6 @@
+vhdl work "register_32.vhd"
+vhdl work "f_function.vhd"
+vhdl work "buffer.vhd"
+vhdl work "round.vhd"
+vhdl work "post_processing.vhd"
+vhdl work "encryption_datapath.vhd"

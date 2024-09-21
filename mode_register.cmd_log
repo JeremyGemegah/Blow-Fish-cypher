@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/mode_register.xst" -ofn "C:/Users/jerem/OneDrive/Desktop/projects/blowfish/mode_register.syr" 

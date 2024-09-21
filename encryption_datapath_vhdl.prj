@@ -1,0 +1,6 @@
+vhdl work "C:\Users\jerem\OneDrive\Desktop\projects\blowfish\register_32.vhd"
+vhdl work "C:\Users\jerem\OneDrive\Desktop\projects\blowfish\f_function.vhd"
+vhdl work "C:\Users\jerem\OneDrive\Desktop\projects\blowfish\buffer.vhd"
+vhdl work "C:\Users\jerem\OneDrive\Desktop\projects\blowfish\round.vhd"
+vhdl work "C:\Users\jerem\OneDrive\Desktop\projects\blowfish\post_processing.vhd"
+vhdl work "C:\Users\jerem\OneDrive\Desktop\projects\blowfish\encryption_datapath.vhd"
